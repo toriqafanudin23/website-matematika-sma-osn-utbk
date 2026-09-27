@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Pembinaan Olimpiade Sains Nasional (OSN) Matematika SMA – Sumber Belajar Matematika</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Modul pembinaan intensif Olimpiade Sains Nasional (OSN) Matematika jenjang SMA: Teori Bilangan, Aljabar Ketaksamaan AM-GM & Cauchy-Schwarz, Geometri Euklidean, dan Kombinatorika.">
+    <meta name="author" content="Toriq Afanudin">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- KaTeX CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- MathJax Fallback -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-white text-[#222222] font-['Open_Sans',sans-serif] min-h-screen flex flex-col">
+
+    <!-- Top Bar -->
+    <div class="topbar-bg text-white text-[11px] sm:text-xs py-2 px-3 sm:px-8 border-b border-blue-900/50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <span class="font-medium text-slate-200">Sumber Belajar Matematika</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-300 truncate">Portal Pembelajaran Akademis</span>
+            </div>
+            <div class="flex items-center space-x-3 text-slate-300">
+                <span>SMA Kelas X, XI, XII</span>
+                <span class="text-slate-500">&bull;</span>
+                <span>OSN &amp; UTBK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Banner -->
+    <header class="header-bg text-white py-4 sm:py-6 px-4 sm:px-8 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-xl sm:text-2xl flex items-center justify-center shadow border border-[#FDCB2C]/40 flex-shrink-0">
+                    \(\sum\)
+                </div>
+                <div>
+                    <a href="../index.html" class="group">
+                        <h1 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-white tracking-tight group-hover:text-[#FDCB2C] transition leading-snug">
+                            Sumber Belajar Matematika
+                        </h1>
+                    </a>
+                    <p class="text-[11px] sm:text-sm text-slate-200 mt-0.5 font-['Open_Sans',sans-serif]">
+                        Pembahasan Konseptual, Notasi Ilmiah, dan Pembuktian Terstruktur
+                    </p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-3 text-xs text-slate-200 bg-[#121F33]/80 px-4 py-2.5 rounded border border-blue-800">
+                <a href="../index.html" class="text-[#FDCB2C] font-semibold hover:underline">&larr; Kembali ke Beranda</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="nav-bg text-white text-sm font-bold shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+            <div class="hidden sm:flex items-center space-x-1" id="nav-links">
+                <a href="../index.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">HOME</a>
+                <a href="../index.html#materi" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">MATERI SMA</a>
+                <a href="olimpiade-matematika.html" class="py-3.5 px-5 nav-link-active transition uppercase tracking-wider text-xs">OLIMPIADE OSN</a>
+                <a href="utbk-snbt-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">UTBK-SNBT</a>
+                <a href="../latihan-soal.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">BANK SOAL</a>
+                <a href="../tentang.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">TENTANG</a>
+            </div>
+
+            <!-- Mobile Navbar Header Title & Hamburger Button -->
+            <div class="sm:hidden flex items-center justify-between w-full py-2.5">
+                <span class="text-xs font-bold text-[#FDCB2C] tracking-wider uppercase">OLIMPIADE (OSN)</span>
+                <button id="mobile-menu-btn" class="p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Navigation Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900 px-3 py-2 space-y-1">
+            <a href="../index.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">HOME</a>
+            <a href="../index.html#materi" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">MATERI SMA</a>
+            <a href="olimpiade-matematika.html" class="block py-2.5 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">OLIMPIADE OSN</a>
+            <a href="utbk-snbt-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">UTBK-SNBT</a>
+            <a href="../latihan-soal.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">BANK SOAL</a>
+            <a href="../tentang.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-slate-50 border-b border-slate-200 py-2.5 px-4 sm:px-8 text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto flex items-center space-x-2 overflow-x-auto whitespace-nowrap">
+            <a href="../index.html" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Home</a>
+            <span>/</span>
+            <a href="../index.html#materi" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Materi</a>
+            <span>/</span>
+            <span class="text-slate-500 font-medium truncate">Pembinaan Olimpiade Sains Nasional (OSN) Matematika</span>
+        </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-10 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+        
+        <!-- Main Article -->
+        <article class="lg:col-span-8 text-[#222222] leading-relaxed text-left sm:text-justify space-y-6">
+            
+            <!-- Article Header Title & Meta -->
+            <div class="border-b-2 border-[#FDCB2C] pb-4">
+                <div class="flex items-center space-x-2 mb-2">
+                    <span class="bg-amber-100 text-amber-900 border border-amber-300 text-[11px] font-bold px-2 py-0.5 rounded">Silabus OSN</span>
+                    <span class="text-xs text-slate-500">Tingkat Kota/Kabupaten, Provinsi &amp; Nasional</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64] mb-2">
+                    Pembinaan Olimpiade Sains Nasional (OSN) Matematika SMA
+                </h1>
+                <p class="text-xs text-slate-600">
+                    Kajian mendalam 4 pilar kompetisi matematika: <strong>Teori Bilangan</strong>, <strong>Aljabar Ketaksamaan</strong>, <strong>Geometri Euklidean</strong>, dan <strong>Kombinatorika</strong> dengan pembuktian analitis.
+                </p>
+            </div>
+
+            <!-- Mobile Table of Contents Collapsible -->
+            <div class="block lg:hidden bg-slate-50 p-4 rounded border border-slate-200 border-t-4 border-t-[#FDCB2C]">
+                <details class="group">
+                    <summary class="flex justify-between items-center font-bold text-xs uppercase tracking-wider text-[#073C64] cursor-pointer list-none">
+                        <span>DAFTAR ISI HALAMAN (KLIK UNTUK MEMBUKA)</span>
+                        <span class="text-[#149fc0] group-open:rotate-180 transition-transform">&darr;</span>
+                    </summary>
+                    <nav class="mt-3 pt-3 border-t border-slate-200 space-y-2 text-xs">
+                        <a href="#sec-1" class="block text-[#073C64] hover:text-[#149fc0] font-medium">1. Pilar I: Teori Bilangan (Number Theory)</a>
+                        <a href="#sec-2" class="block text-[#073C64] hover:text-[#149fc0] font-medium">2. Pilar II: Aljabar &amp; Ketaksamaan (AM-GM, Cauchy-Schwarz)</a>
+                        <a href="#sec-3" class="block text-[#073C64] hover:text-[#149fc0] font-medium">3. Pilar III: Geometri Euklidean &amp; Segiempat Siklis</a>
+                        <a href="#sec-4" class="block text-[#073C64] hover:text-[#149fc0] font-medium">4. Pilar IV: Kombinatorika &amp; Prinsip Sarang Burung</a>
+                        <a href="#sec-5" class="block text-[#073C64] hover:text-[#149fc0] font-medium">5. Soal Latihan &amp; Studi Kasus OSN</a>
+                    </nav>
+                </details>
+            </div>
+
+            <p class="text-slate-800">
+                Olimpiade Sains Nasional (OSN) bidang Matematika jenjang SMA menguji daya nalar logis, kecakapan abstraksi, serta kemampuan memecahkan masalah non-rutin melalui pembuktian matematis yang sahih. Berbeda dengan soal kurikulum reguler yang dominan bersifat prosedural komputasional, soal-soal olimpiade menuntut pemahaman struktur aljabar mendalam dan ide kreatif (<em>mathematical ingenuity</em>).
+            </p>
+
+            <!-- Section 1 -->
+            <section id="sec-1">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    1. Pilar I: Teori Bilangan (Number Theory)
+                </h2>
+                
+                <h3 class="text-base font-bold text-slate-900 mt-4 mb-2">A. Keterbagian dan Algoritma Pembagian Euklides</h3>
+                <p>
+                    Diberikan dua bilangan bulat $a$ dan $b$ dengan $b > 0$. Maka terdapat dengan tunggal pasangan bilangan bulat $q$ (hasil bagi) dan $r$ (sisa) sedemikian rupa sehingga:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    a = bq + r, \quad \text{dengan } 0 \le r < b
+                    \]
+                </div>
+                <p>
+                    Jika $r = 0$, dikatakan bahwa $b$ membagi habis $a$, dinotasikan dengan $b \mid a$. Untuk sebarang $a, b \in \mathbb{Z}$, Faktor Persekutuan Terbesar dinotasikan $\gcd(a, b)$ dan dapat dicari secara berurutan menggunakan <strong>Algoritma Euklidean</strong>:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \gcd(a, b) = \gcd(b, a \bmod b)
+                    \]
+                </div>
+
+                <h3 class="text-base font-bold text-slate-900 mt-6 mb-2">B. Aritmetika Modulo &amp; Teorema Fermat Kecil</h3>
+                <p>
+                    Relasi kongruensi modulo didefinisikan sebagai berikut: $a \equiv b \pmod{m}$ jika dan hanya jika $m \mid (a - b)$. Dua teorema sentral dalam modulo adalah:
+                </p>
+                <div class="bg-slate-50 p-4 rounded border-l-4 border-[#073C64] my-3 space-y-2">
+                    <p class="font-bold text-[#073C64]">Teorema Fermat Kecil (Fermat's Little Theorem):</p>
+                    <p>
+                        Jika $p$ adalah bilangan prima dan $a$ adalah bilangan bulat yang tidak habis dibagi oleh $p$ ($\gcd(a, p) = 1$), maka berlaku:
+                    </p>
+                    <div class="text-center font-bold">
+                        \[
+                        a^{p-1} \equiv 1 \pmod{p} \quad \implies \quad a^p \equiv a \pmod{p}
+                        \]
+                    </div>
+                </div>
+
+                <h3 class="text-base font-bold text-slate-900 mt-6 mb-2">C. Persamaan Diophantine Linear</h3>
+                <p>
+                    Persamaan bentuk $ax + by = c$ dengan $a, b, c \in \mathbb{Z}$ mempunyai solusi bilangan bulat $(x, y)$ jika dan hanya jika $\gcd(a, b) \mid c$. Berdasarkan Identitas Bézout, jika $(x_0, y_0)$ adalah salah satu solusi partikular, maka solusi umum bilangan bulat adalah:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    x = x_0 + k \cdot \frac{b}{\gcd(a, b)}, \quad y = y_0 - k \cdot \frac{a}{\gcd(a, b)}, \quad \forall k \in \mathbb{Z}
+                    \]
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="sec-2">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    2. Pilar II: Aljabar &amp; Ketaksamaan (Inequalities)
+                </h2>
+                
+                <p>
+                    Soal aljabar olimpiade umumnya berpusat pada pembuktian ketaksamaan klasik, persamaan fungsional, dan faktorisasi bentuk simetris/siklis.
+                </p>
+
+                <h3 class="text-base font-bold text-slate-900 mt-4 mb-2">A. Ketaksamaan Rata-rata (AM-GM Inequality)</h3>
+                <p>
+                    Untuk setiap himpunan bilangan real non-negatif $x_1, x_2, \dots, x_n \ge 0$, Rata-rata Aritmetika (Arithmetic Mean) selalu lebih besar atau sama dengan Rata-rata Geometris (Geometric Mean):
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \frac{x_1 + x_2 + \dots + x_n}{n} \ge \sqrt[n]{x_1 \cdot x_2 \cdots x_n}
+                    \]
+                </div>
+                <p>
+                    Kesetaraan (tanda $=$) berlaku jika dan hanya jika semua variabel bernilai sama: $x_1 = x_2 = \dots = x_n$.
+                </p>
+
+                <h3 class="text-base font-bold text-slate-900 mt-6 mb-2">B. Ketaksamaan Cauchy-Schwarz</h3>
+                <p>
+                    Untuk sebarang barisan bilangan real $(a_1, a_2, \dots, a_n)$ dan $(b_1, b_2, \dots, b_n)$, berlaku:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \left( \sum_{i=1}^n a_i^2 \right) \left( \sum_{i=1}^n b_i^2 \right) \ge \left( \sum_{i=1}^n a_i b_i \right)^2
+                    \]
+                </div>
+                <p>
+                    Kesetaraan tercapai jika dan hanya jika terdapat konstanta $\lambda \in \mathbb{R}$ sehingga $a_i = \lambda b_i$ untuk setiap $i$.
+                </p>
+
+                <div class="bg-amber-50 p-4 rounded border border-amber-200 my-4 text-xs text-slate-800 space-y-2">
+                    <p class="font-bold text-[#073C64]">Bentuk Engel (Engel's Form / Lemma Titu):</p>
+                    <p>
+                        Jika $x_1, x_2, \dots, x_n \in \mathbb{R}$ dan $y_1, y_2, \dots, y_n > 0$, maka:
+                    </p>
+                    <div class="text-center font-bold">
+                        \[
+                        \frac{x_1^2}{y_1} + \frac{x_2^2}{y_2} + \dots + \frac{x_n^2}{y_n} \ge \frac{(x_1 + x_2 + \dots + x_n)^2}{y_1 + y_2 + \dots + y_n}
+                        \]
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="sec-3">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    3. Pilar III: Geometri Euklidean &amp; Segiempat Siklis
+                </h2>
+                <p>
+                    Geometri olimpiade menekankan hubungan sudut, kesebangunan, garis berat, garis tinggi, serta lingkaran dalam dan luar segitiga.
+                </p>
+
+                <h3 class="text-base font-bold text-slate-900 mt-4 mb-2">A. Segiempat Tali Busur (Cyclic Quadrilateral)</h3>
+                <p>
+                    Empat titik $A, B, C, D$ terletak pada suatu lingkaran (<em>konsiklis</em>) jika dan hanya jika salah satu kriteria berikut terpenuhi:
+                </p>
+                <ul class="list-disc pl-5 space-y-1 text-xs text-slate-800 my-2">
+                    <li>Sudut yang berhadapan saling berpelurus: $\angle A + \angle C = 180^\circ$ dan $\angle B + \angle D = 180^\circ$.</li>
+                    <li>Sudut keliling yang menghadap busur yang sama besarnya sama: $\angle ABD = \angle ACD$.</li>
+                    <li><strong>Teorema Ptolemy:</strong> Pada segiempat tali busur $ABCD$, jumlah perkalian sisi yang berhadapan sama dengan perkalian diagonal:
+                        <div class="my-1 text-center font-semibold">
+                            \[
+                            AC \cdot BD = AB \cdot CD + BC \cdot AD
+                            \]
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 class="text-base font-bold text-slate-900 mt-6 mb-2">B. Teorema Ceva dan Menelaus</h3>
+                <p>
+                    Diberikan segitiga $ABC$ dengan titik $D, E, F$ masing-masing terletak pada sisi $BC, CA, AB$:
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-3 text-xs">
+                    <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                        <p class="font-bold text-[#073C64] mb-1">Teorema Ceva (Konkurensi Tiga Garis):</p>
+                        <p>Garis $AD, BE, CF$ berpotongan di satu titik (konkuren) jika dan hanya jika:</p>
+                        <div class="text-center font-semibold my-2">
+                            \[
+                            \frac{AF}{FB} \cdot \frac{BD}{DC} \cdot \frac{CE}{EA} = 1
+                            \]
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-200">
+                        <p class="font-bold text-[#073C64] mb-1">Teorema Menelaus (Kolinearitas Tiga Titik):</p>
+                        <p>Titik $D, E, F$ terletak pada satu garis lurus (kolinear) jika dan hanya jika:</p>
+                        <div class="text-center font-semibold my-2">
+                            \[
+                            \frac{AF}{FB} \cdot \frac{BD}{DC} \cdot \frac{CE}{EA} = -1 \quad (\text{panjang berarah})
+                            \]
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="sec-4">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    4. Pilar IV: Kombinatorika &amp; Prinsip Sarang Burung
+                </h2>
+                
+                <h3 class="text-base font-bold text-slate-900 mt-4 mb-2">A. Prinsip Sarang Burung (Dirichlet's Pigeonhole Principle)</h3>
+                <p>
+                    Jika $n$ objek dimasukkan ke dalam $k$ kotak dengan $n > k$, maka sedikitnya ada satu kotak yang memuat sekurang-kurangnya:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \left\lceil \frac{n}{k} \right\rceil \text{ objek}
+                    \]
+                </div>
+                <p>
+                    Prinsip sederhana ini terbukti sangat ampuh untuk membuktikan keberadaan (<em>existence proofs</em>) dalam permasalahan partisi geometri, pewarnaan graf, dan subset bilangan.
+                </p>
+
+                <h3 class="text-base font-bold text-slate-900 mt-6 mb-2">B. Prinsip Inklusi-Eksklusi (PIE)</h3>
+                <p>
+                    Untuk tiga himpunan hingga $A, B, C$, banyaknya elemen gabungan dihitung dengan:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    |A \cup B \cup C| = |A| + |B| + |C| - (|A \cap B| + |B \cap C| + |C \cap A|) + |A \cap B \cap C|
+                    \]
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="sec-5">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    5. Contoh Soal &amp; Studi Kasus OSN
+                </h2>
+
+                <div class="bg-slate-50 p-4 sm:p-5 rounded border border-slate-200 my-4 space-y-3">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="font-bold text-[#073C64]">Contoh 5.1 (OSN Tingkat Provinsi - Teori Bilangan)</span>
+                        <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-semibold text-[10px]">Tingkat Lanjut</span>
+                    </div>
+                    <p class="text-xs text-slate-800">
+                        Tentukan semua pasangan bilangan bulat positif $(x, y)$ sedemikian rupa sehingga:
+                    </p>
+                    <div class="text-center my-2">
+                        \[
+                        x^2 + 3y = y^2 + 3x + 10
+                        \]
+                    </div>
+                    <div class="pt-3 border-t border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Pembahasan Rinci:</p>
+                        <p>1. Pindahkan semua suku variabel ke ruas kiri:</p>
+                        <div>
+                            \[
+                            (x^2 - y^2) - 3(x - y) = 10
+                            \]
+                        </div>
+                        <p>2. Faktorkan suku $(x - y)$:</p>
+                        <div>
+                            \[
+                            (x - y)(x + y) - 3(x - y) = 10 \implies (x - y)(x + y - 3) = 10
+                            \]
+                        </div>
+                        <p>3. Karena $x, y \in \mathbb{Z}^+$, maka $x + y \ge 2$, sehingga $x + y - 3 \ge -1$. Pasangan faktor perkalian dari $10$ adalah $(1, 10), (2, 5), (5, 2), (10, 1), (-1, -10), (-2, -5)$:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Jika $x - y = 1$ dan $x + y - 3 = 10 \implies x + y = 13$. Diperoleh $2x = 14 \implies x = 7, y = 6$.</li>
+                            <li>Jika $x - y = 2$ dan $x + y - 3 = 5 \implies x + y = 8$. Diperoleh $2x = 10 \implies x = 5, y = 3$.</li>
+                            <li>Jika $x - y = 5$ dan $x + y - 3 = 2 \implies x + y = 5$. Diperoleh $2x = 10 \implies x = 5, y = 0$ (bukan bilangan bulat positif).</li>
+                            <li>Jika $x - y = -2$ dan $x + y - 3 = -5 \implies x + y = -2$ (mustahil karena $x, y > 0$).</li>
+                        </ul>
+                        <p class="font-semibold text-emerald-700">&check; Jadi pasangan bilangan bulat positif yang memenuhi adalah $(7, 6)$ dan $(5, 3)$.</p>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                    <a href="../latihan-soal.html" class="inline-flex justify-center items-center px-4 py-2.5 bg-[#073C64] hover:bg-[#121F33] text-white text-xs font-semibold rounded transition shadow-sm">
+                        Uji Pemahaman di Bank Latihan Soal OSN &rarr;
+                    </a>
+                    <a href="../index.html#materi" class="inline-flex justify-center items-center px-4 py-2.5 bg-white hover:bg-slate-50 text-[#073C64] text-xs font-semibold rounded border border-slate-300 transition">
+                        Kembali ke Katalog Modul
+                    </a>
+                </div>
+            </section>
+
+        </article>
+
+        <!-- Right Sidebar TOC -->
+        <aside id="daftar-isi" class="lg:col-span-4 space-y-6">
+            <div class="bg-slate-50 p-5 rounded border border-slate-200 border-t-2 border-t-[#FDCB2C] sticky top-20">
+                <h3 class="font-bold font-['Lora',serif] text-[#073C64] border-b border-slate-300 pb-2 mb-3 text-xs uppercase tracking-wider">
+                    Navigasi Modul Olimpiade
+                </h3>
+                <nav class="space-y-2.5 text-xs text-slate-700">
+                    <a href="#sec-1" class="block text-[#073C64] hover:text-[#149fc0] font-medium">1. Pilar I: Teori Bilangan</a>
+                    <a href="#sec-2" class="block text-[#073C64] hover:text-[#149fc0] font-medium">2. Pilar II: Aljabar &amp; Ketaksamaan</a>
+                    <a href="#sec-3" class="block text-[#073C64] hover:text-[#149fc0] font-medium">3. Pilar III: Geometri Euklidean</a>
+                    <a href="#sec-4" class="block text-[#073C64] hover:text-[#149fc0] font-medium">4. Pilar IV: Kombinatorika &amp; PHP</a>
+                    <a href="#sec-5" class="block text-[#073C64] hover:text-[#149fc0] font-medium">5. Studi Kasus &amp; Pembahasan OSN</a>
+                </nav>
+                
+                <div class="mt-6 pt-4 border-t border-slate-200 space-y-3">
+                    <div class="bg-white p-3 rounded border border-slate-200 text-xs">
+                        <div class="font-bold text-[#073C64] mb-1">Target Kompetisi:</div>
+                        <ul class="text-[11px] text-slate-600 space-y-1">
+                            <li>&bull; OSN-K (Tingkat Kabupaten)</li>
+                            <li>&bull; OSN-P (Tingkat Provinsi)</li>
+                            <li>&bull; OSN Nasional &amp; Pelatnas IMO</li>
+                        </ul>
+                    </div>
+                    <a href="../latihan-soal.html" class="block text-center py-2 px-3 bg-[#073C64] text-white text-xs font-semibold rounded hover:bg-[#121F33] transition">
+                        Buka Latihan Soal OSN
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#073C64] text-slate-200 text-xs py-8 border-t-4 border-[#FDCB2C] mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 Sumber Belajar Matematika &bull; Toriq Afanudin &bull; Kalikajar, Wonosobo
+            </div>
+            <div class="flex space-x-6 font-semibold">
+                <a href="../index.html" class="hover:text-[#FDCB2C] transition">Home</a>
+                <a href="../index.html#materi" class="hover:text-[#FDCB2C] transition">Materi</a>
+                <a href="olimpiade-matematika.html" class="hover:text-[#FDCB2C] transition">Olimpiade OSN</a>
+                <a href="utbk-snbt-matematika.html" class="hover:text-[#FDCB2C] transition">UTBK-SNBT</a>
+                <a href="../tentang.html" class="hover:text-[#FDCB2C] transition">Tentang</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '\\[', right: '\\]', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false}
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+    </script>
+</body>
+</html>

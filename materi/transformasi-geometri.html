@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Modul Transformasi Geometri SMA Kelas XI – Translasi, Refleksi, Rotasi &amp; Dilatasi</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Modul Transformasi Geometri SMA Kelas XI – Translasi, Refleksi, Rotasi &amp; Dilatasi">
+    <meta name="description" content="Pembahasan mendalam konsep Transformasi Geometri SMA Kelas XI: pergeseran (translasi), pencerminan (refleksi), perputaran (rotasi), dan perkalian (dilatasi) berbasis matriks aljabar dan rumus LaTeX.">
+    <meta name="keywords" content="transformasi geometri, matriks transformasi, translasi matematika, refleksi geometri, rotasi koordinat kartesius, dilatasi matematika, matematika sma kelas 11, contoh soal transformasi geometri, rumus matriks geometri, toriq afanudin">
+    <meta name="author" content="Toriq Afanudin">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Indonesian">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://sumberbelajarmatematika.web.id/materi/transformasi-geometri.html">
+    <meta property="og:site_name" content="Sumber Belajar Matematika">
+    <meta property="og:title" content="Modul Transformasi Geometri SMA Kelas XI – Teori &amp; Matriks Pembahasan">
+    <meta property="og:description" content="Kajian lengkap translasi, refleksi, rotasi, dan dilatasi koordinat kartesius menggunakan pendekatan matriks matematika.">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modul Transformasi Geometri SMA Kelas XI – Teori &amp; Matriks">
+    <meta name="twitter:description" content="Kajian lengkap translasi, refleksi, rotasi, dan dilatasi koordinat kartesius menggunakan pendekatan matriks matematika.">
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Transformasi Geometri: Translasi, Refleksi, Rotasi, dan Dilatasi Berbasis Matriks",
+      "description": "Panduan komprehensif transformasi geometri bidang datar kartesius untuk jenjang SMA Kelas XI.",
+      "author": {
+        "@type": "Person",
+        "name": "Toriq Afanudin",
+        "jobTitle": "Pengajar Matematika"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sumber Belajar Matematika"
+      },
+      "inLanguage": "id-ID",
+      "about": ["Transformasi Geometri", "Translasi", "Refleksi", "Rotasi", "Dilatasi", "Matriks", "Matematika SMA Kelas XI"]
+    }
+    </script>
+    
+    <!-- Google Fonts: Open Sans & Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- KaTeX CDN for Fast LaTeX Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="bg-white text-[#222222] font-['Open_Sans',sans-serif] min-h-screen flex flex-col">
+
+    <!-- Top Bar -->
+    <div class="topbar-bg text-white text-[11px] sm:text-xs py-2 px-3 sm:px-8 border-b border-blue-900/50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <span class="font-medium text-slate-200">Sumber Belajar Matematika</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-300 truncate">Portal Pembelajaran Akademis</span>
+            </div>
+            <div class="flex items-center space-x-3 text-slate-300">
+                <span>SMA Kelas X, XI, XII</span>
+                <span class="text-slate-500">&bull;</span>
+                <span>OSN &amp; UTBK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Banner -->
+    <header class="header-bg text-white py-4 sm:py-6 px-4 sm:px-8 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-xl sm:text-2xl flex items-center justify-center shadow border border-[#FDCB2C]/40 flex-shrink-0">
+                    \(\sum\)
+                </div>
+                <div>
+                    <a href="../index.html" class="group">
+                        <h1 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-white tracking-tight group-hover:text-[#FDCB2C] transition leading-snug">
+                            Sumber Belajar Matematika
+                        </h1>
+                    </a>
+                    <p class="text-[11px] sm:text-sm text-slate-200 mt-0.5 font-['Open_Sans',sans-serif]">
+                        Pembahasan Konseptual, Notasi Ilmiah, dan Pembuktian Terstruktur
+                    </p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-3 text-xs text-slate-200 bg-[#121F33]/80 px-4 py-2.5 rounded border border-blue-800">
+                <a href="../index.html#materi" class="text-[#FDCB2C] font-semibold hover:underline">&larr; Kembali ke Katalog Utama</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="nav-bg text-white text-sm font-bold shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+            <div class="hidden sm:flex items-center space-x-1" id="nav-links">
+                <a href="../index.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">HOME</a>
+                <a href="../index.html#materi" class="py-3.5 px-5 nav-link-active transition uppercase tracking-wider text-xs">MATERI SMA</a>
+                <a href="olimpiade-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">OLIMPIADE OSN</a>
+                <a href="utbk-snbt-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">UTBK-SNBT</a>
+                <a href="../latihan-soal.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">BANK SOAL</a>
+                <a href="../tentang.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">TENTANG</a>
+            </div>
+            
+            <!-- Mobile Navbar Header Title & Hamburger Button -->
+            <div class="sm:hidden flex items-center justify-between w-full py-2.5">
+                <span class="text-xs font-bold text-[#FDCB2C] tracking-wider uppercase">MENU MATERI</span>
+                <button id="mobile-menu-btn" class="p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900 px-3 py-2 space-y-1">
+            <a href="../index.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">HOME</a>
+            <a href="../index.html#materi" class="block py-2.5 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">MATERI SMA</a>
+            <a href="olimpiade-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">OLIMPIADE OSN</a>
+            <a href="utbk-snbt-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">UTBK-SNBT</a>
+            <a href="../latihan-soal.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">BANK SOAL</a>
+            <a href="../tentang.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-slate-50 border-b border-slate-200 py-2.5 px-4 sm:px-8 text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto flex items-center space-x-2 overflow-x-auto whitespace-nowrap">
+            <a href="../index.html" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Home</a>
+            <span>/</span>
+            <a href="../index.html#materi" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Materi</a>
+            <span>/</span>
+            <span class="text-slate-500 truncate">Transformasi Geometri</span>
+        </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-10 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+        
+        <!-- Main Article -->
+        <article class="lg:col-span-8 text-[#222222] leading-relaxed text-left sm:text-justify space-y-6">
+            
+            <!-- Article Header Title & Meta -->
+            <div class="border-b-2 border-[#FDCB2C] pb-4">
+                <span class="text-[11px] sm:text-xs font-bold text-[#149fc0] uppercase tracking-wider block mb-1">Modul Pembelajaran</span>
+                <h1 class="text-2xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64] mb-2">
+                    Transformasi Geometri
+                </h1>
+                <div class="text-xs text-slate-500 flex flex-wrap items-center gap-2 sm:gap-3">
+                    <span class="bg-slate-100 px-2 py-0.5 rounded text-slate-700">Kategori: Geometri Analitik</span>
+                    <span class="hidden sm:inline">&bull;</span>
+                    <span>Format: Catatan Akademis</span>
+                </div>
+            </div>
+
+            <!-- Mobile Table of Contents Collapsible / Quick Box (Shown only on Mobile < lg) -->
+            <div class="block lg:hidden bg-slate-50 p-4 rounded border border-slate-200 border-t-4 border-t-[#FDCB2C]">
+                <details class="group">
+                    <summary class="flex justify-between items-center font-bold text-xs uppercase tracking-wider text-[#073C64] cursor-pointer list-none">
+                        <span>DAFTAR ISI HALAMAN (KLIK UNTUK MEMBUKA)</span>
+                        <span class="text-[#149fc0] group-open:rotate-180 transition-transform">&darr;</span>
+                    </summary>
+                    <nav class="mt-3 pt-3 border-t border-slate-200 space-y-2 text-xs">
+                        <a href="#sec-1" class="block text-[#073C64] hover:text-[#149fc0] font-medium">1. Pendahuluan Transformasi</a>
+                        <a href="#sec-2" class="block text-[#073C64] hover:text-[#149fc0] font-medium">2. Translasi (Pergeseran Vektor)</a>
+                        <a href="#sec-3" class="block text-[#073C64] hover:text-[#149fc0] font-medium">3. Studi Kasus Geometri Segitiga</a>
+                        <a href="#sec-4" class="block text-[#073C64] hover:text-[#149fc0] font-medium">4. Refleksi (Pencerminan)</a>
+                        <a href="#sec-5" class="block text-[#073C64] hover:text-[#149fc0] font-medium">5. Rotasi (Perputaran Sudut)</a>
+                        <a href="#sec-6" class="block text-[#073C64] hover:text-[#149fc0] font-medium">6. Dilatasi (Penskalaan)</a>
+                        <a href="#sec-7" class="block text-[#073C64] hover:text-[#149fc0] font-medium">7. Soal Latihan Mandiri</a>
+                    </nav>
+                </details>
+            </div>
+
+            <p class="text-slate-800">
+                Transformasi geometri adalah pemetaan titik-titik pada bidang datar ke posisi baru berdasarkan aturan aljabar atau matriks tertentu. Jenis-jenis utama transformasi meliputi pergeseran (translasi), pencerminan (refleksi), perputaran (rotasi), dan penskalaan (dilatasi).
+            </p>
+
+            <!-- Section 1 -->
+            <section id="sec-1">
+                <h2 class="text-xl font-bold text-slate-900 border-b-2 border-amber-500 pb-2 mt-8 mb-4">
+                    1. Pendahuluan Transformasi Geometri
+                </h2>
+                <p>
+                    Apabila suatu titik $P(x,y)$ dipetakan oleh transformasi $T$ menjadi titik bayangan $P'(x',y')$, maka bentuk pemetaannya dituliskan sebagai:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    T : P(x, y) \longmapsto P'(x', y')
+                    \]
+                </div>
+                <p>
+                    Transformasi yang tidak mengubah bentuk dan ukuran objek dinamakan <em>isometri</em> (misalnya translasi, refleksi, dan rotasi), sedangkan transformasi yang mengubah ukuran secara proporsional dinamakan <em>dilatasi</em>.
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="sec-2">
+                <h2 class="text-xl font-bold text-slate-900 border-b-2 border-amber-500 pb-2 mt-8 mb-4">
+                    2. Translasi (Pergeseran Vektor)
+                </h2>
+                <p>
+                    Translasi memindahkan setiap titik pada bidang datar sejauh jarak dan arah tertentu berdasarkan komponen vektor translasi $T = \begin{bmatrix} a \\ b \end{bmatrix}$. Formula pemetaan bayangannya adalah:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} x \\ y \end{bmatrix} + \begin{bmatrix} a \\ b \end{bmatrix} \implies \begin{cases} x' = x + a \\ y' = y + b \end{cases}
+                    \]
+                </div>
+
+                <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2">Contoh 2.1: Translasi Titik</h3>
+                <p>
+                    Diketahui titik $A(2,3)$ ditranslasikan oleh $T = \begin{bmatrix} 6 \\ -7 \end{bmatrix}$. Bayangan titik $A'$ dihitung dengan:
+                </p>
+                <div class="my-2 text-center">
+                    \[
+                    A' = \begin{bmatrix} 2 \\ 3 \end{bmatrix} + \begin{bmatrix} 6 \\ -7 \end{bmatrix} = \begin{bmatrix} 8 \\ -4 \end{bmatrix}
+                    \]
+                </div>
+                <p>Jadi, bayangan titik $A$ adalah $A'(8,-4)$.</p>
+
+                <h3 class="text-lg font-bold text-slate-900 mt-6 mb-2">Contoh 2.2: Translasi Garis Lurus</h3>
+                <p>
+                    Diketahui garis $g$ dengan persamaan $2y = 5x + 7$. Ditranslasikan oleh $T = \begin{bmatrix} 3 \\ -4 \end{bmatrix}$.<br>
+                    Maka hubungan koordinat awal dan bayangan adalah $x = x' - 3$ dan $y = y' + 4$. Substitusikan ke persamaan garis:
+                </p>
+                <div class="my-2 text-center">
+                    \[
+                    \begin{aligned}
+                    2(y' + 4) &amp;= 5(x' - 3) + 7 \\[4pt]
+                    2y' + 8 &amp;= 5x' - 15 + 7 \\[4pt]
+                    2y' &amp;= 5x' - 16
+                    \end{aligned}
+                    \]
+                </div>
+                <p>Persamaan garis bayangan adalah $2y = 5x - 16$ atau $y = \displaystyle\frac{5}{2}x - 8$.</p>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="sec-3">
+                <h2 class="text-xl font-bold text-slate-900 border-b-2 border-amber-500 pb-2 mt-8 mb-4">
+                    3. Studi Kasus Geometri Segitiga dan Irisan Bidang
+                </h2>
+                <p>
+                    <strong>Soal:</strong> Diketahui segitiga $ABC$ dengan koordinat titik sudut $A(8,1)$, $B(12,1)$, dan $C(10,5)$. Jika segitiga $ABC$ ditranslasikan oleh $T = \begin{bmatrix} 0 \\ -3 \end{bmatrix}$, tentukan koordinat bayangannya serta hitung luas bagian segitiga yang berada di bawah sumbu-$X$ ($y < 0$).
+                </p>
+                
+                <p>
+                    <strong>Pembahasan:</strong><br>
+                    1. Hitung titik bayangan segitiga $A'B'C'$:
+                </p>
+                <div class="my-2 text-center">
+                    \[
+                    A' = \begin{bmatrix} 8 \\ -2 \end{bmatrix}, \quad B' = \begin{bmatrix} 12 \\ -2 \end{bmatrix}, \quad C' = \begin{bmatrix} 10 \\ 2 \end{bmatrix}
+                    \]
+                </div>
+                <p>
+                    2. Hitung luas segitiga total:<br>
+                    Panjang alas $A'B' = 12 - 8 = 4$, dan tinggi dari $y = -2$ hingga $y = 2$ adalah $4$.
+                </p>
+                <div class="my-2 text-center">
+                    \[
+                    L_{\text{total}} = \frac{1}{2} \times 4 \times 4 = 8 \text{ satuan luas}
+                    \]
+                </div>
+                <p>
+                    3. Hitung bagian di atas sumbu-$X$ ($y > 0$):<br>
+                    Garis sumbu-$X$ ($y=0$) memotong sisi segitiga pada $(9,0)$ dan $(11,0)$. Luas segitiga di atas sumbu-$X$ dengan alas $11 - 9 = 2$ dan tinggi $2$ adalah:
+                </p>
+                <div class="my-2 text-center">
+                    \[
+                    L_{\text{atas}} = \frac{1}{2} \times 2 \times 2 = 2 \text{ satuan luas}
+                    \]
+                </div>
+                <p>
+                    4. Luas bagian di bawah sumbu-$X$ ($y < 0$) adalah:
+                </p>
+                <div class="my-2 text-center">
+                    \[
+                    L_{\text{bawah}} = L_{\text{total}} - L_{\text{atas}} = 8 - 2 = 6 \text{ satuan luas}
+                    \]
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="sec-4">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    4. Refleksi (Pencerminan Matriks)
+                </h2>
+                <p>
+                    Refleksi adalah transformasi pencerminan terhadap suatu garis cermin acuan. Ringkasan matriks refleksi dasar adalah sebagai berikut:
+                </p>
+                <div class="table-responsive-wrapper my-4">
+                    <table class="w-full text-xs sm:text-sm text-left text-slate-800">
+                        <thead class="bg-slate-100 text-slate-900 font-bold border-b border-slate-200">
+                            <tr>
+                                <th class="p-2.5">Garis / Titik Cermin</th>
+                                <th class="p-2.5">Pemetaan Titik</th>
+                                <th class="p-2.5">Matriks Transformasi</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr>
+                                <td class="p-2.5">Sumbu-$X$ ($y=0$)</td>
+                                <td class="p-2.5">$(x, y) \mapsto (x, -y)$</td>
+                                <td class="p-2.5 font-mono">$\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}$</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5">Sumbu-$Y$ ($x=0$)</td>
+                                <td class="p-2.5">$(x, y) \mapsto (-x, y)$</td>
+                                <td class="p-2.5 font-mono">$\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}$</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5">Garis $y = x$</td>
+                                <td class="p-2.5">$(x, y) \mapsto (y, x)$</td>
+                                <td class="p-2.5 font-mono">$\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}$</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5">Garis $y = -x$</td>
+                                <td class="p-2.5">$(x, y) \mapsto (-y, -x)$</td>
+                                <td class="p-2.5 font-mono">$\begin{bmatrix} 0 &amp; -1 \\ -1 &amp; 0 \end{bmatrix}$</td>
+                            </tr>
+                            <tr>
+                                <td class="p-2.5">Titik Pusat $O(0,0)$</td>
+                                <td class="p-2.5">$(x, y) \mapsto (-x, -y)$</td>
+                                <td class="p-2.5 font-mono">$\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}$</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="sec-5">
+                <h2 class="text-xl font-bold text-slate-900 border-b-2 border-amber-500 pb-2 mt-8 mb-4">
+                    5. Rotasi (Perputaran Sudut)
+                </h2>
+                <p>
+                    Rotasi sejauh sudut $\theta$ dengan titik pusat $O(0,0)$ dinyatakan dalam formulasi matriks rotasi:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} \cos\theta &amp; -\sin\theta \\ \sin\theta &amp; \cos\theta \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix}
+                    \]
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="sec-6">
+                <h2 class="text-xl font-bold text-slate-900 border-b-2 border-amber-500 pb-2 mt-8 mb-4">
+                    6. Dilatasi (Penskalaan Ukuran)
+                </h2>
+                <p>
+                    Dilatasi dengan titik pusat $O(0,0)$ dan faktor skala $k$ dinyatakan oleh perkalian matriks skalar:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} k &amp; 0 \\ 0 &amp; k \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} kx \\ ky \end{bmatrix}
+                    \]
+                </div>
+            </section>
+
+            <!-- Section 7 -->
+            <section id="sec-7">
+                <h2 class="text-xl font-bold text-slate-900 border-b-2 border-amber-500 pb-2 mt-8 mb-4">
+                    7. Soal Latihan Mandiri
+                </h2>
+                <ol class="list-decimal pl-6 space-y-2 text-slate-800 my-3">
+                    <li>Tentukan persamaan bayangan lingkaran $x^2 + y^2 = 9$ oleh pencerminan terhadap garis $y = -x$.</li>
+                    <li>Titik $P(-4, 2)$ diputar sejauh $90^\circ$ berlawanan arah jarum jam dengan pusat $O(0,0)$, kemudian dilanjutkan dengan dilatasi faktor skala $k = 3$. Tentukan koordinat akhir titik $P''$.</li>
+                </ol>
+            </section>
+
+        </article>
+
+        <!-- Right Sidebar (TOC) -->
+        <aside id="daftar-isi" class="lg:col-span-4 space-y-6">
+            <div class="bg-slate-50 p-5 rounded border border-slate-200 border-t-2 border-t-amber-500 sticky top-6">
+                <h3 class="font-bold text-slate-900 border-b border-slate-300 pb-2 mb-3 text-xs uppercase tracking-wider">
+                    Daftar Isi Halaman
+                </h3>
+                <nav class="space-y-2 text-xs text-slate-700">
+                    <a href="#sec-1" class="block text-[#0056b3] hover:text-amber-600">1. Pendahuluan Transformasi</a>
+                    <a href="#sec-2" class="block text-[#0056b3] hover:text-amber-600">2. Translasi (Pergeseran Vektor)</a>
+                    <a href="#sec-3" class="block text-[#0056b3] hover:text-amber-600">3. Studi Kasus Geometri Segitiga</a>
+                    <a href="#sec-4" class="block text-[#0056b3] hover:text-amber-600">4. Refleksi (Pencerminan)</a>
+                    <a href="#sec-5" class="block text-[#0056b3] hover:text-amber-600">5. Rotasi (Perputaran Sudut)</a>
+                    <a href="#sec-6" class="block text-[#0056b3] hover:text-amber-600">6. Dilatasi (Penskalaan)</a>
+                    <a href="#sec-7" class="block text-[#0056b3] hover:text-amber-600">7. Soal Latihan Mandiri</a>
+                </nav>
+                <div class="mt-5 pt-3 border-t border-slate-200">
+                    <a href="#" class="text-[11px] text-amber-600 hover:underline font-medium">&uarr; Ke Atas Halaman</a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#073C64] text-slate-200 text-xs py-8 border-t-4 border-[#FDCB2C] mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 Sumber Belajar Matematika. Disusun secara ilmiah akademis.
+            </div>
+            <div class="flex space-x-6 font-semibold">
+                <a href="../index.html" class="hover:text-[#FDCB2C] transition">Home</a>
+                <a href="../index.html#materi" class="hover:text-[#FDCB2C] transition">Materi</a>
+                <a href="../tentang.html" class="hover:text-[#FDCB2C] transition">Tentang</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

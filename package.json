@@ -1,0 +1,15 @@
+{
+  "name": "sumber-belajar-matematika",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'Static build ready'",
+    "lint": "node -c server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

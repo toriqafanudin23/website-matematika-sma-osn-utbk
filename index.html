@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Sumber Belajar Matematika SMA (Kelas X, XI, XII), OSN &amp; UTBK – Toriq Afanudin</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Sumber Belajar Matematika SMA (Kelas X, XI, XII), OSN &amp; UTBK – Toriq Afanudin">
+    <meta name="description" content="Portal pembelajaran matematika SMA (Kelas X, XI, XII), pembinaan Olimpiade Sains Nasional (OSN), dan persiapan UTBK-SNBT. Disusun secara ilmiah dengan notasi LaTeX oleh Toriq Afanudin.">
+    <meta name="keywords" content="matematika sma, matematika kelas 10, matematika kelas 11, matematika kelas 12, osn matematika, olimpiade matematika sma, utbk snbt matematika, penalaran matematika, pengetahuan kuantitatif, eksponensial logaritma, transformasi geometri, kalkulus integral, rumus matematika latex, sumber belajar matematika, toriq afanudin">
+    <meta name="author" content="Toriq Afanudin">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="Indonesian">
+    <meta name="geo.region" content="ID-JT">
+    <meta name="geo.placename" content="Wonosobo, Jawa Tengah, Indonesia">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sumberbelajarmatematika.web.id/">
+    <meta property="og:site_name" content="Sumber Belajar Matematika">
+    <meta property="og:title" content="Sumber Belajar Matematika SMA, OSN &amp; UTBK – Toriq Afanudin">
+    <meta property="og:description" content="Portal edukasi matematika terstruktur: kurikulum SMA Kelas X, XI, XII, materi pembinaan olimpiade OSN, dan persiapan tes UTBK SNBT berbasis LaTeX.">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sumber Belajar Matematika SMA, OSN &amp; UTBK – Toriq Afanudin">
+    <meta name="twitter:description" content="Portal edukasi matematika terstruktur: kurikulum SMA Kelas X, XI, XII, materi pembinaan olimpiade OSN, dan persiapan tes UTBK SNBT.">
+
+    <!-- Structured Data (Schema.org JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://sumberbelajarmatematika.web.id/#website",
+          "url": "https://sumberbelajarmatematika.web.id/",
+          "name": "Sumber Belajar Matematika",
+          "description": "Portal Pembelajaran Matematika Akademis SMA, Persiapan Olimpiade Sains Nasional (OSN), dan Persiapan UTBK-SNBT.",
+          "inLanguage": "id-ID",
+          "author": {
+            "@type": "Person",
+            "name": "Toriq Afanudin",
+            "jobTitle": "Pengajar Matematika",
+            "email": "toriqafanudin23@gmail.com"
+          }
+        },
+        {
+          "@type": "EducationalOrganization",
+          "name": "Sumber Belajar Matematika",
+          "url": "https://sumberbelajarmatematika.web.id/",
+          "founder": {
+            "@type": "Person",
+            "name": "Toriq Afanudin"
+          },
+          "description": "Media pembelajaran matematika ilmiah, terbuka, dan terstruktur untuk tingkat SMA, OSN Matematika, dan UTBK-SNBT."
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Google Fonts: Open Sans & Lora -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- KaTeX CDN for High-Speed LaTeX Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- MathJax Configuration & Fallback -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-[#222222] font-['Open_Sans',sans-serif] min-h-screen flex flex-col overflow-x-hidden">
+
+    <!-- Top Bar -->
+    <div class="topbar-bg text-white text-[11px] sm:text-xs py-2 px-3 sm:px-8 border-b border-blue-900/50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <span class="font-medium text-slate-200">Sumber Belajar Matematika</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-300 truncate">Portal Pembelajaran Akademis</span>
+            </div>
+            <div class="flex items-center space-x-3 text-slate-300">
+                <span>SMA Kelas X, XI, XII</span>
+                <span class="text-slate-500">&bull;</span>
+                <span>OSN &amp; UTBK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Banner -->
+    <header class="header-bg text-white py-4 sm:py-6 px-4 sm:px-8 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-xl sm:text-2xl flex items-center justify-center shadow border border-[#FDCB2C]/40 flex-shrink-0">
+                    \(\sum\)
+                </div>
+                <div>
+                    <a href="index.html" class="group">
+                        <h1 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-white tracking-tight group-hover:text-[#FDCB2C] transition leading-snug">
+                            Sumber Belajar Matematika
+                        </h1>
+                    </a>
+                    <p class="text-[11px] sm:text-sm text-slate-200 mt-0.5 font-['Open_Sans',sans-serif]">
+                        Pembahasan Konseptual, Notasi Ilmiah, dan Pembuktian Terstruktur
+                    </p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-3 text-xs text-slate-200 bg-[#121F33]/80 px-4 py-2.5 rounded border border-blue-800">
+                <svg class="w-4 h-4 text-[#FDCB2C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <span>Media Referensi Matematika Akademis</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="nav-bg text-white text-sm font-bold shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+            <div class="hidden sm:flex items-center space-x-1" id="nav-links">
+                <a href="index.html" class="py-3.5 px-5 nav-link-active transition uppercase tracking-wider text-xs">HOME</a>
+                <a href="#materi" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">MATERI SMA</a>
+                <a href="materi/olimpiade-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">OLIMPIADE OSN</a>
+                <a href="materi/utbk-snbt-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">UTBK-SNBT</a>
+                <a href="latihan-soal.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">BANK SOAL</a>
+                <a href="tentang.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">TENTANG</a>
+            </div>
+
+            <!-- Mobile Navbar Header Title & Hamburger Button -->
+            <div class="sm:hidden flex items-center justify-between w-full py-2.5">
+                <span class="text-xs font-bold text-[#FDCB2C] tracking-wider uppercase">MENU UTAMA</span>
+                <button id="mobile-menu-btn" class="p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Navigation Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900 px-3 py-2 space-y-1">
+            <a href="index.html" class="block py-2.5 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">HOME</a>
+            <a href="#materi" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">MATERI SMA</a>
+            <a href="materi/olimpiade-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">OLIMPIADE OSN</a>
+            <a href="materi/utbk-snbt-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">UTBK-SNBT</a>
+            <a href="latihan-soal.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">BANK SOAL</a>
+            <a href="tentang.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
+        </div>
+    </nav>
+
+    <!-- Hero / Banner Section -->
+    <section class="bg-gradient-to-b from-slate-50 via-white to-slate-50/50 py-8 sm:py-12 px-4 sm:px-8 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+            <div class="lg:col-span-8 space-y-3 sm:space-y-4">
+                <div class="inline-flex items-center space-x-2 bg-amber-50 text-[#073C64] text-[11px] sm:text-xs font-semibold px-2.5 py-1 sm:px-3 sm:py-1.5 rounded border border-amber-200">
+                    <span class="w-2 h-2 rounded-full bg-[#FDCB2C]"></span>
+                    <span>Modul Pelajaran Matematika Akademis</span>
+                </div>
+                <h2 class="text-2xl sm:text-4xl font-bold font-['Lora',serif] text-[#073C64] leading-tight">
+                    Portal Sumber Belajar Matematika SMA, OSN, &amp; UTBK
+                </h2>
+                <p class="text-slate-700 leading-relaxed text-xs sm:text-sm max-w-3xl">
+                    Website ini didedikasikan untuk menyediakan materi pembelajaran matematika dengan penulisan ilmiah yang rapi, lugas, dan terstruktur. Disajikan secara jernih dan didukung rendering rumus matematis berbasis <strong>LaTeX / KaTeX</strong> untuk siswa <strong>SMA Kelas X, XI, XII</strong>, pembinaan <strong>Olimpiade Sains Nasional (OSN)</strong>, dan pemantapan <strong>UTBK-SNBT</strong>.
+                </p>
+                <div class="pt-2 flex flex-wrap gap-3">
+                    <a href="#materi" class="inline-flex justify-center items-center px-5 py-3 rounded bg-[#073C64] hover:bg-[#121F33] text-white font-semibold text-xs transition shadow border border-blue-950 w-full sm:w-auto">
+                        Eksplorasi Katalog Materi
+                        <svg class="w-4 h-4 ml-2 text-[#FDCB2C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </a>
+                    <a href="latihan-soal.html" class="inline-flex justify-center items-center px-5 py-3 rounded bg-[#FDCB2C] hover:bg-[#e5b824] text-[#121F33] font-bold text-xs transition shadow w-full sm:w-auto">
+                        Bank Latihan Soal Interaktif &rarr;
+                    </a>
+                    <a href="tentang.html" class="inline-flex justify-center items-center px-5 py-3 rounded bg-white hover:bg-slate-50 text-[#073C64] font-semibold text-xs transition border border-slate-300 w-full sm:w-auto">
+                        Tentang Portal
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Academic Highlights Box -->
+            <div class="lg:col-span-4 bg-white p-5 sm:p-6 rounded border border-slate-200 shadow-sm border-t-4 border-t-[#FDCB2C] mt-2 lg:mt-0 space-y-3">
+                <h3 class="font-bold font-['Lora',serif] text-[#073C64] text-base border-b border-slate-200 pb-2">
+                    Tiga Pilar Fokus Belajar
+                </h3>
+                <ul class="space-y-3 text-xs text-slate-700">
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-[#073C64] font-bold text-base leading-none">&bull;</span>
+                        <div>
+                            <strong class="text-[#073C64]">Matematika SMA (Kelas X, XI, XII):</strong>
+                            <p class="text-slate-600 mt-0.5">Aljabar, Geometri Analitik, Polinomial, Trigonometri, dan Kalkulus Integral.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-amber-600 font-bold text-base leading-none">&bull;</span>
+                        <div>
+                            <strong class="text-amber-800">Persiapan Olimpiade (OSN):</strong>
+                            <p class="text-slate-600 mt-0.5">Teori Bilangan, Ketaksamaan AM-GM/Cauchy-Schwarz, Geometri Euklidean, dan Kombinatorika.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start space-x-2.5">
+                        <span class="text-[#149fc0] font-bold text-base leading-none">&bull;</span>
+                        <div>
+                            <strong class="text-sky-800">Persiapan UTBK - SNBT:</strong>
+                            <p class="text-slate-600 mt-0.5">Drilling Penalaran Matematika kontekstual &amp; Pengetahuan Kuantitatif tipe kecukupan data.</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="pt-2 border-t border-slate-100 flex justify-between items-center text-xs">
+                    <span class="text-slate-500">Pengembang: Toriq Afanudin</span>
+                    <a href="tentang.html" class="font-semibold text-[#149fc0] hover:text-[#073C64]">
+                        Profil Guru &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formula of the Day / Featured Scientific Showcase -->
+    <section class="bg-white border-b border-slate-200 py-6 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
+            
+            <div class="bg-slate-50 p-4 rounded border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <span class="text-[11px] font-bold text-[#073C64] uppercase tracking-wider block mb-1">Sorotan Teorema &bull; SMA X &amp; XI</span>
+                    <h4 class="font-bold text-sm text-slate-800 font-['Lora',serif]">Invers Logaritma &amp; Matriks Geometri</h4>
+                    <div class="my-2 bg-white p-2 rounded border border-slate-200 text-xs text-center font-mono">
+                        \[ {}^a\log b = c \iff a^c = b \quad \Big| \quad R_\theta = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \]
+                    </div>
+                </div>
+                <a href="materi/eksponensial.html" class="text-xs font-semibold text-[#149fc0] hover:underline mt-2">&rarr; Pelajari Aljabar Eksponen</a>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <span class="text-[11px] font-bold text-amber-800 uppercase tracking-wider block mb-1">Sorotan Teorema &bull; Olimpiade OSN</span>
+                    <h4 class="font-bold text-sm text-slate-800 font-['Lora',serif]">Ketaksamaan AM-GM Klasik</h4>
+                    <div class="my-2 bg-white p-2 rounded border border-slate-200 text-xs text-center font-mono">
+                        \[ \frac{x_1 + x_2 + \dots + x_n}{n} \ge \sqrt[n]{x_1 x_2 \cdots x_n} \]
+                    </div>
+                </div>
+                <a href="materi/olimpiade-matematika.html" class="text-xs font-semibold text-amber-700 hover:underline mt-2">&rarr; Pelajari Materi OSN</a>
+            </div>
+
+            <div class="bg-slate-50 p-4 rounded border border-slate-200 flex flex-col justify-between">
+                <div>
+                    <span class="text-[11px] font-bold text-sky-800 uppercase tracking-wider block mb-1">Sorotan Teorema &bull; UTBK-SNBT &amp; XII</span>
+                    <h4 class="font-bold text-sm text-slate-800 font-['Lora',serif]">Teorema Dasar Kalkulus (FTC)</h4>
+                    <div class="my-2 bg-white p-2 rounded border border-slate-200 text-xs text-center font-mono">
+                        \[ \int_{a}^{b} f(x) \, dx = F(b) - F(a) \]
+                    </div>
+                </div>
+                <a href="materi/kalkulus-integral.html" class="text-xs font-semibold text-sky-700 hover:underline mt-2">&rarr; Pelajari Kalkulus Integral</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Katalog Materi Section -->
+    <main id="materi" class="max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-12 flex-grow w-full">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between border-b-2 border-[#FDCB2C] pb-3 mb-6 sm:mb-8 gap-4">
+            <div>
+                <span class="text-[11px] sm:text-xs font-bold text-[#149fc0] uppercase tracking-wider block mb-1">Daftar Modul</span>
+                <h2 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64]">
+                    Katalog Materi Pembelajaran
+                </h2>
+                <p class="text-xs text-slate-600 mt-1">
+                    Pilih topik kurikulum SMA, pembinaan Olimpiade OSN, atau persiapan UTBK-SNBT untuk membaca teori dan pembahasan soal.
+                </p>
+            </div>
+            
+            <!-- Interactive Search Filter Bar -->
+            <div class="w-full md:w-72">
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Cari materi aljabar, kalkulus, OSN..." 
+                           class="w-full text-xs bg-slate-50 border border-slate-300 rounded px-3 py-2.5 pl-9 focus:outline-none focus:border-[#073C64] focus:bg-white transition shadow-sm">
+                    <svg class="w-4 h-4 text-slate-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Segmented Tabs -->
+        <div class="flex flex-wrap gap-2 mb-6">
+            <button data-filter="all" class="catalog-tab-btn px-3 py-1.5 text-xs font-bold rounded bg-[#073C64] text-white shadow-sm transition">
+                Semua Modul
+            </button>
+            <button data-filter="sma-x" class="catalog-tab-btn px-3 py-1.5 text-xs font-medium rounded bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                Matematika SMA Kelas X
+            </button>
+            <button data-filter="sma-xi" class="catalog-tab-btn px-3 py-1.5 text-xs font-medium rounded bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                Matematika SMA Kelas XI
+            </button>
+            <button data-filter="sma-xii" class="catalog-tab-btn px-3 py-1.5 text-xs font-medium rounded bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                Matematika SMA Kelas XII
+            </button>
+            <button data-filter="osn" class="catalog-tab-btn px-3 py-1.5 text-xs font-medium rounded bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                Olimpiade Sains (OSN)
+            </button>
+            <button data-filter="utbk" class="catalog-tab-btn px-3 py-1.5 text-xs font-medium rounded bg-slate-100 text-slate-700 hover:bg-slate-200 transition">
+                Persiapan UTBK-SNBT
+            </button>
+        </div>
+
+        <!-- Materi Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8" id="materi-grid">
+            
+            <!-- Card 1: Eksponensial & Logaritma (Kelas X) -->
+            <article class="materi-card bg-white rounded overflow-hidden flex flex-col justify-between" data-category="sma-x">
+                <div>
+                    <div class="bg-slate-100 p-3.5 sm:p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="text-[11px] font-bold text-[#073C64] bg-blue-100/70 px-2.5 py-0.5 rounded border border-blue-200">
+                            Matematika SMA Kelas X
+                        </span>
+                        <span class="text-xs text-slate-500 font-medium">Modul 01</span>
+                    </div>
+                    
+                    <div class="p-5 sm:p-6 space-y-3 sm:space-y-4">
+                        <h3 class="text-lg sm:text-xl font-bold font-['Lora',serif] text-[#073C64]">
+                            <a href="materi/eksponensial.html" class="hover:text-[#149fc0] transition">
+                                Eksponensial dan Logaritma
+                            </a>
+                        </h3>
+
+                        <!-- Math Formula Preview Box -->
+                        <div class="bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-200 text-center text-xs overflow-x-auto my-2">
+                            \[ a^n = \underbrace{a \times \dots \times a}_{n \text{ faktor}} \quad \Big| \quad ^a\log b = c \iff a^c = b \]
+                        </div>
+                        
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                            Membahas secara konseptual definisi eksponen, sifat perkalian/pembagian pangkat, bentuk akar pecahan, teknik merasionalkan penyebut irasional, fungsi eksponensial, hukum logaritma, dan 14 soal sumatif.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-[11px] text-slate-400">Modul Lengkap + Soal</span>
+                    <a href="materi/eksponensial.html" class="inline-flex items-center text-xs font-semibold text-[#149fc0] hover:text-[#073C64] transition">
+                        Buka Modul &rarr;
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 2: Transformasi Geometri (Kelas XI) -->
+            <article class="materi-card bg-white rounded overflow-hidden flex flex-col justify-between" data-category="sma-xi">
+                <div>
+                    <div class="bg-slate-100 p-3.5 sm:p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="text-[11px] font-bold text-[#073C64] bg-blue-100/70 px-2.5 py-0.5 rounded border border-blue-200">
+                            Matematika SMA Kelas XI
+                        </span>
+                        <span class="text-xs text-slate-500 font-medium">Modul 02</span>
+                    </div>
+                    
+                    <div class="p-5 sm:p-6 space-y-3 sm:space-y-4">
+                        <h3 class="text-lg sm:text-xl font-bold font-['Lora',serif] text-[#073C64]">
+                            <a href="materi/transformasi-geometri.html" class="hover:text-[#149fc0] transition">
+                                Transformasi Geometri
+                            </a>
+                        </h3>
+
+                        <!-- Math Formula Preview Box -->
+                        <div class="bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-200 text-center text-xs overflow-x-auto my-2">
+                            \[ \begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} \]
+                        </div>
+                        
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                            Kajian menyeluruh perpindahan objek pada koordinat kartesius meliputi translasi pergeseran vektor, refleksi pencerminan matriks, rotasi sudut, dilatasi, komposisi transformasi, serta studi kasus irisan bidang segitiga.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-[11px] text-slate-400">Modul Lengkap + Soal</span>
+                    <a href="materi/transformasi-geometri.html" class="inline-flex items-center text-xs font-semibold text-[#149fc0] hover:text-[#073C64] transition">
+                        Buka Modul &rarr;
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 3: Kalkulus Diferensial & Integral (Kelas XII) -->
+            <article class="materi-card bg-white rounded overflow-hidden flex flex-col justify-between" data-category="sma-xii">
+                <div>
+                    <div class="bg-slate-100 p-3.5 sm:p-4 border-b border-slate-200 flex justify-between items-center">
+                        <span class="text-[11px] font-bold text-[#073C64] bg-blue-100/70 px-2.5 py-0.5 rounded border border-blue-200">
+                            Matematika SMA Kelas XII
+                        </span>
+                        <span class="text-xs text-slate-500 font-medium">Modul 03</span>
+                    </div>
+                    
+                    <div class="p-5 sm:p-6 space-y-3 sm:space-y-4">
+                        <h3 class="text-lg sm:text-xl font-bold font-['Lora',serif] text-[#073C64]">
+                            <a href="materi/kalkulus-integral.html" class="hover:text-[#149fc0] transition">
+                                Kalkulus: Turunan dan Integral
+                            </a>
+                        </h3>
+
+                        <!-- Math Formula Preview Box -->
+                        <div class="bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-200 text-center text-xs overflow-x-auto my-2">
+                            \[ \int_{a}^{b} f(x) \, dx = F(b) - F(a) \quad \Big| \quad L = \int_{a}^{b} [f(x) - g(x)] \, dx \]
+                        </div>
+                        
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                            Kalkulus analitik untuk jenjang kelas 12: Definisi limit laju perubahan, aturan rantai turunan, anti-diferensial integral tak tentu, Teorema Dasar Kalkulus, serta aplikasi luas daerah kurva.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-[11px] text-slate-400">Modul Lengkap + Soal</span>
+                    <a href="materi/kalkulus-integral.html" class="inline-flex items-center text-xs font-semibold text-[#149fc0] hover:text-[#073C64] transition">
+                        Buka Modul &rarr;
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 4: Olimpiade Sains Nasional (OSN) -->
+            <article class="materi-card bg-white rounded overflow-hidden flex flex-col justify-between border-t-4 border-t-[#FDCB2C]" data-category="osn">
+                <div>
+                    <div class="bg-amber-50 p-3.5 sm:p-4 border-b border-amber-200 flex justify-between items-center">
+                        <span class="text-[11px] font-bold text-amber-900 bg-amber-200/70 px-2.5 py-0.5 rounded border border-amber-300">
+                            Pembinaan Olimpiade (OSN)
+                        </span>
+                        <span class="text-xs text-amber-700 font-semibold">Silabus Lengkap</span>
+                    </div>
+                    
+                    <div class="p-5 sm:p-6 space-y-3 sm:space-y-4">
+                        <h3 class="text-lg sm:text-xl font-bold font-['Lora',serif] text-[#073C64]">
+                            <a href="materi/olimpiade-matematika.html" class="hover:text-[#149fc0] transition">
+                                Pembinaan Olimpiade Sains Nasional (OSN)
+                            </a>
+                        </h3>
+
+                        <!-- Math Formula Preview Box -->
+                        <div class="bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-200 text-center text-xs overflow-x-auto my-2">
+                            \[ \gcd(a, b) \mid c \quad \Big| \quad \frac{\sum x_i}{n} \ge \sqrt[n]{\prod x_i} \quad \Big| \quad AC \cdot BD = AB \cdot CD + BC \cdot AD \]
+                        </div>
+                        
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                            Kajian 4 pilar kompetisi matematika: Teori Bilangan (modulo, Diophantine), Aljabar Ketaksamaan (AM-GM, Cauchy-Schwarz), Geometri Euklidean (Ceva, Menelaus, Ptolemy), dan Kombinatorika (Pigeonhole Principle).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-[11px] text-amber-700 font-semibold">Tingkat OSN-K, OSN-P, Nasional</span>
+                    <a href="materi/olimpiade-matematika.html" class="inline-flex items-center text-xs font-semibold text-[#073C64] hover:text-[#149fc0] transition">
+                        Buka Silabus OSN &rarr;
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 5: Persiapan UTBK - SNBT -->
+            <article class="materi-card bg-white rounded overflow-hidden flex flex-col justify-between border-t-4 border-t-sky-500" data-category="utbk">
+                <div>
+                    <div class="bg-sky-50 p-3.5 sm:p-4 border-b border-sky-200 flex justify-between items-center">
+                        <span class="text-[11px] font-bold text-sky-900 bg-sky-200/70 px-2.5 py-0.5 rounded border border-sky-300">
+                            Persiapan UTBK-SNBT
+                        </span>
+                        <span class="text-xs text-sky-700 font-semibold">Target Skor 700+</span>
+                    </div>
+                    
+                    <div class="p-5 sm:p-6 space-y-3 sm:space-y-4">
+                        <h3 class="text-lg sm:text-xl font-bold font-['Lora',serif] text-[#073C64]">
+                            <a href="materi/utbk-snbt-matematika.html" class="hover:text-[#149fc0] transition">
+                                Penalaran Matematika &amp; Kuantitatif UTBK
+                            </a>
+                        </h3>
+
+                        <!-- Math Formula Preview Box -->
+                        <div class="bg-slate-50 p-2.5 sm:p-3 rounded border border-slate-200 text-center text-xs overflow-x-auto my-2">
+                            \[ \text{Format: } P \text{ vs } Q \quad \Big| \quad \text{Kecukupan Data (1) & (2)} \quad \Big| \quad N(t) = N_0(1 - r)^t \]
+                        </div>
+                        
+                        <p class="text-xs text-slate-600 leading-relaxed line-clamp-3">
+                            Strategi taktis menaklukkan Pengetahuan Kuantitatif dan Penalaran Matematika UTBK-SNBT: pola analisis kecukupan data, hubungan nilai P dan Q, pemodelan peluruhan/laju alir, serta eliminasi cerdas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <span class="text-[11px] text-sky-700 font-semibold">PK &amp; PM SNBT</span>
+                    <a href="materi/utbk-snbt-matematika.html" class="inline-flex items-center text-xs font-semibold text-[#073C64] hover:text-[#149fc0] transition">
+                        Buka Modul UTBK &rarr;
+                    </a>
+                </div>
+            </article>
+
+            <!-- Card 6: Bank Latihan Soal Interaktif -->
+            <article class="materi-card bg-gradient-to-br from-white to-amber-50/40 rounded overflow-hidden flex flex-col justify-between border-2 border-[#FDCB2C]" data-category="soal">
+                <div>
+                    <div class="bg-[#121F33] text-white p-3.5 sm:p-4 flex justify-between items-center">
+                        <span class="text-[11px] font-bold text-[#FDCB2C] uppercase tracking-wider flex items-center">
+                            <span class="w-2 h-2 rounded-full bg-[#FDCB2C] mr-2"></span>
+                            Bank Soal Interaktif
+                        </span>
+                        <span class="text-xs text-slate-300">Live Feedback</span>
+                    </div>
+                    
+                    <div class="p-5 sm:p-6 space-y-3 sm:space-y-4">
+                        <h3 class="text-lg sm:text-xl font-bold font-['Lora',serif] text-[#073C64]">
+                            <a href="latihan-soal.html" class="hover:text-[#149fc0] transition">
+                                Latihan Soal Bervariasi &amp; Pembahasan
+                            </a>
+                        </h3>
+
+                        <!-- Math Formula Preview Box -->
+                        <div class="bg-white p-2.5 sm:p-3 rounded border border-amber-200 text-center text-xs overflow-x-auto my-2 text-slate-800">
+                            \[ \text{Pilihan Ganda A, B, C, D, E} \implies \text{Cek Langsung} + \text{Solusi Step-by-Step LaTeX} \]
+                        </div>
+                        
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Akses puluhan soal sumatif eksponen, kalkulus, olimpiade OSN, dan kuantitatif UTBK lengkap dengan opsi interaktif, indikator benar/salah, dan pembahasan matematis langkah demi langkah berbasis LaTeX.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="px-5 sm:px-6 pb-5 sm:pb-6 pt-3 border-t border-amber-200 flex items-center justify-between">
+                    <span class="text-[11px] text-amber-900 font-semibold">Tersedia Nilai &amp; Akurasi</span>
+                    <a href="latihan-soal.html" class="inline-flex items-center text-xs font-bold text-[#121F33] bg-[#FDCB2C] hover:bg-[#e5b824] px-3 py-1.5 rounded transition shadow-sm">
+                        Mulai Latihan &rarr;
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Tentang Pengembang & Platform Section -->
+    <section class="bg-slate-50 border-t border-slate-200 py-8 sm:py-12 px-4 sm:px-8">
+        <div class="max-w-7xl mx-auto space-y-6 sm:space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between border-b-2 border-[#FDCB2C] pb-3 gap-2">
+                <div>
+                    <span class="text-[11px] sm:text-xs font-bold text-[#149fc0] uppercase tracking-wider block mb-1">Informasi &amp; Pengembang</span>
+                    <h2 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64]">
+                        Tentang Sumber Belajar Matematika
+                    </h2>
+                </div>
+                <a href="tentang.html" class="inline-flex items-center text-xs sm:text-sm font-semibold text-[#149fc0] hover:text-[#073C64] transition">
+                    Halaman Profil Lengkap &rarr;
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+                <div class="lg:col-span-8 text-xs sm:text-sm text-slate-700 leading-relaxed space-y-3 sm:space-y-4">
+                    <p>
+                        Portal <strong>Sumber Belajar Matematika</strong> adalah platform edukasi akademis terbuka yang dirancang khusus untuk memfasilitasi kebutuhan belajar siswa <strong>SMA (Kelas X, XI, XII)</strong>, pembinaan intensif <strong>Olimpiade Sains Nasional (OSN)</strong>, dan pemantapan <strong>UTBK-SNBT</strong>.
+                    </p>
+                    <p>
+                        Setiap modul pembelajaran disusun mengedepankan ketelitian akademis: dimulai dari definisi formal, sifat-sifat dasar aljabar dan geometri, pembuktian teorema, hingga pembahasan soal secara analitis berstandar internasional menggunakan notasi LaTeX / KaTeX.
+                    </p>
+                    
+                    <div class="pt-2 flex flex-wrap gap-3">
+                        <a href="latihan-soal.html" class="inline-flex items-center px-4 py-2.5 bg-[#073C64] hover:bg-[#121F33] text-white text-xs font-semibold rounded transition shadow-sm">
+                            Buka Bank Latihan Soal Interaktif
+                            <svg class="w-4 h-4 ml-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="tentang.html" class="inline-flex items-center px-4 py-2.5 bg-white hover:bg-slate-100 text-[#073C64] text-xs font-semibold rounded border border-slate-300 transition">
+                            Profil Pengembang Portal
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-4 bg-white p-5 sm:p-6 rounded border border-slate-200 shadow-sm space-y-3">
+                    <div class="flex items-center space-x-3 border-b border-slate-100 pb-3">
+                        <div class="w-12 h-12 rounded-full bg-[#073C64] text-[#FDCB2C] font-bold text-lg flex items-center justify-center flex-shrink-0 shadow">
+                            TA
+                        </div>
+                        <div>
+                            <h3 class="font-bold font-['Lora',serif] text-[#073C64] text-sm sm:text-base">
+                                Toriq Afanudin
+                            </h3>
+                            <p class="text-xs text-[#149fc0] font-semibold">Pengajar Matematika</p>
+                        </div>
+                    </div>
+                    <dl class="space-y-2 text-xs text-slate-600">
+                        <div>
+                            <dt class="text-slate-400 font-medium">Alamat:</dt>
+                            <dd class="text-slate-800 font-medium">Desa Kembaran RT.03/RW.02, Kec. Kalikajar, Kab. Wonosobo, Jawa Tengah.</dd>
+                        </div>
+                        <div>
+                            <dt class="text-slate-400 font-medium">Email:</dt>
+                            <dd><a href="mailto:toriqafanudin23@gmail.com" class="text-[#149fc0] hover:underline font-medium">toriqafanudin23@gmail.com</a></dd>
+                        </div>
+                        <div>
+                            <dt class="text-slate-400 font-medium">Fokus Bimbingan:</dt>
+                            <dd class="text-slate-800">Kurikulum SMA &bull; Olimpiade OSN &bull; UTBK-SNBT</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#073C64] text-slate-200 text-xs py-8 sm:py-10 border-t-4 border-[#FDCB2C]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 space-y-6">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-blue-900 pb-6">
+                <div>
+                    <div class="text-[#FDCB2C] font-bold font-['Lora',serif] text-sm sm:text-base tracking-wide mb-1">
+                        SUMBER BELAJAR MATEMATIKA
+                    </div>
+                    <p class="text-slate-300 text-xs max-w-md">
+                        Portal Pembelajaran Matematika Akademis SMA (Kelas X, XI, XII), Persiapan Olimpiade Sains Nasional (OSN), dan UTBK-SNBT.
+                    </p>
+                </div>
+                <div class="flex flex-wrap gap-4 text-xs font-semibold">
+                    <a href="index.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Home</a>
+                    <span>&bull;</span>
+                    <a href="#materi" class="text-slate-200 hover:text-[#FDCB2C] transition">Materi Pelajaran</a>
+                    <span>&bull;</span>
+                    <a href="materi/olimpiade-matematika.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Olimpiade OSN</a>
+                    <span>&bull;</span>
+                    <a href="materi/utbk-snbt-matematika.html" class="text-slate-200 hover:text-[#FDCB2C] transition">UTBK-SNBT</a>
+                    <span>&bull;</span>
+                    <a href="latihan-soal.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Bank Soal</a>
+                    <span>&bull;</span>
+                    <a href="tentang.html" class="text-slate-200 hover:text-[#FDCB2C] transition">Tentang</a>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row justify-between items-center text-[11px] text-slate-300 gap-2">
+                <div>
+                    &copy; 2026 Sumber Belajar Matematika. Disusun oleh Toriq Afanudin.
+                </div>
+                <div>
+                    Kalikajar, Kab. Wonosobo &bull; toriqafanudin23@gmail.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu, Filter Tabs & Search -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('hidden');
+            });
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // KaTeX Auto-Render Initializer
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '\\[', right: '\\]', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false}
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+
+        // Search Filter for Cards
+        const searchInput = document.getElementById('search-input');
+        const materiGrid = document.getElementById('materi-grid');
+        const cards = materiGrid ? materiGrid.getElementsByTagName('article') : [];
+
+        if (searchInput && materiGrid) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                Array.from(cards).forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (!query || text.includes(query)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        }
+
+        // Category Tab Filter
+        const tabBtns = document.querySelectorAll('.catalog-tab-btn');
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => {
+                    b.classList.remove('bg-[#073C64]', 'text-white', 'shadow-sm');
+                    b.classList.add('bg-slate-100', 'text-slate-700');
+                });
+                btn.classList.add('bg-[#073C64]', 'text-white', 'shadow-sm');
+                btn.classList.remove('bg-slate-100', 'text-slate-700');
+
+                const filterVal = btn.getAttribute('data-filter');
+                Array.from(cards).forEach(card => {
+                    const cardCat = card.getAttribute('data-category');
+                    if (filterVal === 'all' || cardCat === filterVal || (filterVal === 'all')) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

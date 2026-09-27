@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Kalkulus: Turunan dan Integral – Sumber Belajar Matematika SMA Kelas XII</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Modul pembelajaran Kalkulus Matematika SMA Kelas XII: Limit Fungsi, Aturan Turunan, Integral Tak Tentu dan Tentu, Teknik Substitusi, serta Perhitungan Luas dan Volume Benda Putar.">
+    <meta name="author" content="Toriq Afanudin">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- KaTeX CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- MathJax Fallback -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-white text-[#222222] font-['Open_Sans',sans-serif] min-h-screen flex flex-col">
+
+    <!-- Top Bar -->
+    <div class="topbar-bg text-white text-[11px] sm:text-xs py-2 px-3 sm:px-8 border-b border-blue-900/50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <span class="font-medium text-slate-200">Sumber Belajar Matematika</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-300 truncate">Portal Pembelajaran Akademis</span>
+            </div>
+            <div class="flex items-center space-x-3 text-slate-300">
+                <span>SMA Kelas X, XI, XII</span>
+                <span class="text-slate-500">&bull;</span>
+                <span>OSN &amp; UTBK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Banner -->
+    <header class="header-bg text-white py-4 sm:py-6 px-4 sm:px-8 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-xl sm:text-2xl flex items-center justify-center shadow border border-[#FDCB2C]/40 flex-shrink-0">
+                    \(\sum\)
+                </div>
+                <div>
+                    <a href="../index.html" class="group">
+                        <h1 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-white tracking-tight group-hover:text-[#FDCB2C] transition leading-snug">
+                            Sumber Belajar Matematika
+                        </h1>
+                    </a>
+                    <p class="text-[11px] sm:text-sm text-slate-200 mt-0.5 font-['Open_Sans',sans-serif]">
+                        Pembahasan Konseptual, Notasi Ilmiah, dan Pembuktian Terstruktur
+                    </p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-3 text-xs text-slate-200 bg-[#121F33]/80 px-4 py-2.5 rounded border border-blue-800">
+                <a href="../index.html#materi" class="text-[#FDCB2C] font-semibold hover:underline">&larr; Kembali ke Katalog Modul</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="nav-bg text-white text-sm font-bold shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+            <div class="hidden sm:flex items-center space-x-1" id="nav-links">
+                <a href="../index.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">HOME</a>
+                <a href="../index.html#materi" class="py-3.5 px-5 nav-link-active transition uppercase tracking-wider text-xs">MATERI SMA</a>
+                <a href="olimpiade-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">OLIMPIADE OSN</a>
+                <a href="utbk-snbt-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">UTBK-SNBT</a>
+                <a href="../latihan-soal.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">BANK SOAL</a>
+                <a href="../tentang.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">TENTANG</a>
+            </div>
+
+            <!-- Mobile Navbar Header Title & Hamburger Button -->
+            <div class="sm:hidden flex items-center justify-between w-full py-2.5">
+                <span class="text-xs font-bold text-[#FDCB2C] tracking-wider uppercase">KALKULUS SMA XII</span>
+                <button id="mobile-menu-btn" class="p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Navigation Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900 px-3 py-2 space-y-1">
+            <a href="../index.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">HOME</a>
+            <a href="../index.html#materi" class="block py-2.5 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">MATERI SMA</a>
+            <a href="olimpiade-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">OLIMPIADE OSN</a>
+            <a href="utbk-snbt-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">UTBK-SNBT</a>
+            <a href="../latihan-soal.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">BANK SOAL</a>
+            <a href="../tentang.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-slate-50 border-b border-slate-200 py-2.5 px-4 sm:px-8 text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto flex items-center space-x-2 overflow-x-auto whitespace-nowrap">
+            <a href="../index.html" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Home</a>
+            <span>/</span>
+            <a href="../index.html#materi" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Materi</a>
+            <span>/</span>
+            <span class="text-slate-500 font-medium truncate">Kalkulus: Turunan dan Integral</span>
+        </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-10 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+        
+        <!-- Main Article -->
+        <article class="lg:col-span-8 text-[#222222] leading-relaxed text-left sm:text-justify space-y-6">
+            
+            <!-- Article Header Title & Meta -->
+            <div class="border-b-2 border-[#FDCB2C] pb-4">
+                <div class="flex items-center space-x-2 mb-2">
+                    <span class="bg-blue-100 text-[#073C64] border border-blue-200 text-[11px] font-bold px-2 py-0.5 rounded">SMA Kelas XII</span>
+                    <span class="text-xs text-slate-500">Kalkulus &amp; Analisis Real</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64] mb-2">
+                    Kalkulus: Diferensial dan Integral
+                </h1>
+                <p class="text-xs text-slate-600">
+                    Kajian teoritis dan aplikasi kalkulus: Definisi limit laju perubahan, aturan rantai turunan, Teorema Dasar Kalkulus, integral substitusi, dan perhitungan luas bidang kurva.
+                </p>
+            </div>
+
+            <!-- Mobile Table of Contents Collapsible -->
+            <div class="block lg:hidden bg-slate-50 p-4 rounded border border-slate-200 border-t-4 border-t-[#FDCB2C]">
+                <details class="group">
+                    <summary class="flex justify-between items-center font-bold text-xs uppercase tracking-wider text-[#073C64] cursor-pointer list-none">
+                        <span>DAFTAR ISI HALAMAN (KLIK UNTUK MEMBUKA)</span>
+                        <span class="text-[#149fc0] group-open:rotate-180 transition-transform">&darr;</span>
+                    </summary>
+                    <nav class="mt-3 pt-3 border-t border-slate-200 space-y-2 text-xs">
+                        <a href="#sec-1" class="block text-[#073C64] hover:text-[#149fc0] font-medium">1. Konsep Dasar Turunan (Diferensial)</a>
+                        <a href="#sec-2" class="block text-[#073C64] hover:text-[#149fc0] font-medium">2. Sifat dan Aturan Rantai</a>
+                        <a href="#sec-3" class="block text-[#073C64] hover:text-[#149fc0] font-medium">3. Integral Tak Tentu (Anti-Turunan)</a>
+                        <a href="#sec-4" class="block text-[#073C64] hover:text-[#149fc0] font-medium">4. Integral Tentu &amp; Teorema Dasar Kalkulus</a>
+                        <a href="#sec-5" class="block text-[#073C64] hover:text-[#149fc0] font-medium">5. Aplikasi Geometri: Luas Daerah Kurva</a>
+                        <a href="#sec-6" class="block text-[#073C64] hover:text-[#149fc0] font-medium">6. Contoh Soal &amp; Latihan</a>
+                    </nav>
+                </details>
+            </div>
+
+            <p class="text-slate-800">
+                Kalkulus merupakan cabang matematika yang mempelajari perubahan kontinu melalui dua pilar yang saling berinvers: kalkulus diferensial yang menganalisis gradien garis singgung dan laju perubahan sesaat, serta kalkulus integral yang mengagregasikan akumulasi kuantitas tak terhingga kecil menjadi besaran luas dan volume.
+            </p>
+
+            <!-- Section 1 -->
+            <section id="sec-1">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    1. Konsep Dasar Turunan (Diferensial)
+                </h2>
+                <p>
+                    Diberikan fungsi kontinu $f: D \to \mathbb{R}$. Turunan pertama fungsi $f$ pada titik $x$, dinotasikan $f'(x)$ atau $\dfrac{df}{dx}$, didefinisikan sebagai limit dari laju perubahan rata-rata saat selisih interval $\Delta x \to 0$:
+                </p>
+                <div class="my-4 text-center">
+                    \[
+                    f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}
+                    \]
+                </div>
+                <p>
+                    Secara geometris, $f'(c)$ merepresentasikan kemiringan (gradien) garis singgung kurva grafik $y = f(x)$ di titik $x = c$.
+                </p>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="sec-2">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    2. Sifat-Sifat dan Aturan Turunan
+                </h2>
+                <p>Untuk fungsi $u(x)$ dan $v(x)$ yang terdiferensialkan serta konstanta $c \in \mathbb{R}$, berlaku:</p>
+                <ol class="list-decimal pl-6 space-y-1.5 my-3 text-xs text-slate-800">
+                    <li>$\dfrac{d}{dx}[c \cdot x^n] = c \cdot n \cdot x^{n-1}$</li>
+                    <li>$\dfrac{d}{dx}[u(x) \pm v(x)] = u'(x) \pm v'(x)$</li>
+                    <li><strong>Aturan Perkalian:</strong> $\dfrac{d}{dx}[u \cdot v] = u'v + uv'$</li>
+                    <li><strong>Aturan Pembagian:</strong> $\dfrac{d}{dx}\left[\dfrac{u}{v}\right] = \dfrac{u'v - uv'}{v^2}$</li>
+                    <li><strong>Aturan Rantai (Chain Rule):</strong> Jika $y = f(u)$ dan $u = g(x)$, maka $\dfrac{dy}{dx} = \dfrac{dy}{du} \cdot \dfrac{du}{dx}$</li>
+                </ol>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="sec-3">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    3. Integral Tak Tentu (Anti-Diferensial)
+                </h2>
+                <p>
+                    Operasi integral tak tentu membalik proses penurunan. Jika $F'(x) = f(x)$, maka:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \int f(x) \, dx = F(x) + C, \quad C \in \mathbb{R} \text{ (konstanta integrasi)}
+                    \]
+                </div>
+                <p>Rumus dasar integral aljabar:</p>
+                <div class="my-3 text-center">
+                    \[
+                    \int x^n \, dx = \frac{1}{n+1} x^{n+1} + C \quad (\text{untuk } n \neq -1)
+                    \]
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="sec-4">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    4. Integral Tentu &amp; Teorema Dasar Kalkulus
+                </h2>
+                <p>
+                    Hubungan fundamental antara turunan dan integral dirumuskan dalam <strong>Teorema Dasar Kalkulus (Fundamental Theorem of Calculus)</strong>:
+                </p>
+                <div class="bg-slate-50 p-4 rounded border-l-4 border-[#073C64] my-3">
+                    <p class="font-bold text-[#073C64]">Teorema Dasar Kalkulus Bagian II:</p>
+                    <p class="text-xs text-slate-700 mt-1">
+                        Jika $f$ adalah fungsi kontinu pada interval $[a, b]$ dan $F$ adalah sebarang anti-turunan dari $f$, maka:
+                    </p>
+                    <div class="text-center font-bold my-2 text-slate-900">
+                        \[
+                        \int_{a}^{b} f(x) \, dx = \Big[ F(x) \Big]_{a}^{b} = F(b) - F(a)
+                        \]
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="sec-5">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    5. Aplikasi Geometri: Luas Daerah Bidang Kurva
+                </h2>
+                <p>
+                    Luas daerah $L$ yang dibatasi oleh kurva $y = f(x)$, sumbu-$X$, serta garis batas $x = a$ dan $x = b$ dengan $f(x) \ge 0$ adalah:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    L = \int_{a}^{b} f(x) \, dx
+                    \]
+                </div>
+                <p>
+                    Jika daerah dibatasi oleh dua kurva $y_1 = f(x)$ di atas dan $y_2 = g(x)$ di bawah pada interval $[a, b]$, maka luasnya adalah:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    L = \int_{a}^{b} \left( f(x) - g(x) \right) \, dx
+                    \]
+                </div>
+            </section>
+
+            <!-- Section 6 -->
+            <section id="sec-6">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    6. Contoh Soal &amp; Pembahasan
+                </h2>
+
+                <div class="bg-slate-50 p-4 sm:p-5 rounded border border-slate-200 my-4 space-y-3">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="font-bold text-[#073C64]">Contoh 6.1 (Perhitungan Luas Parabola)</span>
+                        <span class="bg-blue-100 text-[#073C64] px-2 py-0.5 rounded font-semibold text-[10px]">Kelas XII</span>
+                    </div>
+                    <p class="text-xs text-slate-800">
+                        Tentukan luas daerah yang dibatasi oleh kurva $y = 6x - x^2$ dan sumbu-$X$.
+                    </p>
+                    <div class="pt-3 border-t border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Pembahasan Rinci:</p>
+                        <p>1. Tentukan titik potong terhadap sumbu-$X$ ($y = 0$):</p>
+                        <div>
+                            \[
+                            6x - x^2 = 0 \implies x(6 - x) = 0 \implies x_1 = 0, \quad x_2 = 6
+                            \]
+                        </div>
+                        <p>2. Pada interval $[0, 6]$, kurva parabola membuka ke bawah dengan $y \ge 0$.</p>
+                        <p>3. Hitung luas menggunakan integral tentu:</p>
+                        <div>
+                            \[
+                            L = \int_{0}^{6} (6x - x^2) \, dx = \left[ 3x^2 - \frac{1}{3}x^3 \right]_{0}^{6}
+                            \]
+                            \[
+                            = \left( 3(36) - \frac{216}{3} \right) - 0 = 108 - 72 = 36 \text{ satuan luas}
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Luas daerah adalah $36$ satuan luas.</p>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                    <a href="../latihan-soal.html" class="inline-flex justify-center items-center px-4 py-2.5 bg-[#073C64] hover:bg-[#121F33] text-white text-xs font-semibold rounded transition shadow-sm">
+                        Latih Soal Kalkulus di Bank Soal &rarr;
+                    </a>
+                    <a href="../index.html#materi" class="inline-flex justify-center items-center px-4 py-2.5 bg-white hover:bg-slate-50 text-[#073C64] text-xs font-semibold rounded border border-slate-300 transition">
+                        Kembali ke Beranda
+                    </a>
+                </div>
+            </section>
+
+        </article>
+
+        <!-- Right Sidebar TOC -->
+        <aside id="daftar-isi" class="lg:col-span-4 space-y-6">
+            <div class="bg-slate-50 p-5 rounded border border-slate-200 border-t-2 border-t-[#FDCB2C] sticky top-20">
+                <h3 class="font-bold font-['Lora',serif] text-[#073C64] border-b border-slate-300 pb-2 mb-3 text-xs uppercase tracking-wider">
+                    Daftar Isi Kalkulus
+                </h3>
+                <nav class="space-y-2.5 text-xs text-slate-700">
+                    <a href="#sec-1" class="block text-[#073C64] hover:text-[#149fc0] font-medium">1. Konsep Dasar Turunan</a>
+                    <a href="#sec-2" class="block text-[#073C64] hover:text-[#149fc0] font-medium">2. Sifat &amp; Aturan Rantai</a>
+                    <a href="#sec-3" class="block text-[#073C64] hover:text-[#149fc0] font-medium">3. Integral Tak Tentu</a>
+                    <a href="#sec-4" class="block text-[#073C64] hover:text-[#149fc0] font-medium">4. Integral Tentu &amp; FTC</a>
+                    <a href="#sec-5" class="block text-[#073C64] hover:text-[#149fc0] font-medium">5. Aplikasi Luas Daerah</a>
+                    <a href="#sec-6" class="block text-[#073C64] hover:text-[#149fc0] font-medium">6. Contoh &amp; Pembahasan</a>
+                </nav>
+                
+                <div class="mt-6 pt-4 border-t border-slate-200 space-y-3">
+                    <div class="bg-white p-3 rounded border border-slate-200 text-xs">
+                        <div class="font-bold text-[#073C64] mb-1">Kurikulum SMA:</div>
+                        <p class="text-[11px] text-slate-600">Matematika Peminatan / Lanjut Kelas XII SMA &amp; Persiapan Ujian Masuk PTN.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#073C64] text-slate-200 text-xs py-8 border-t-4 border-[#FDCB2C] mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 Sumber Belajar Matematika &bull; Toriq Afanudin &bull; Kalikajar, Wonosobo
+            </div>
+            <div class="flex space-x-6 font-semibold">
+                <a href="../index.html" class="hover:text-[#FDCB2C] transition">Home</a>
+                <a href="../index.html#materi" class="hover:text-[#FDCB2C] transition">Materi</a>
+                <a href="olimpiade-matematika.html" class="hover:text-[#FDCB2C] transition">Olimpiade OSN</a>
+                <a href="utbk-snbt-matematika.html" class="hover:text-[#FDCB2C] transition">UTBK-SNBT</a>
+                <a href="../tentang.html" class="hover:text-[#FDCB2C] transition">Tentang</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '\\[', right: '\\]', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false}
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+    </script>
+</body>
+</html>

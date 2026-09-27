@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Halaman Utama / Beranda -->
+    <url>
+        <loc>https://sumberbelajarmatematika.web.id/index.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Halaman Tentang Pengembang & Platform -->
+    <url>
+        <loc>https://sumberbelajarmatematika.web.id/tentang.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Bank Soal Interaktif -->
+    <url>
+        <loc>https://sumberbelajarmatematika.web.id/latihan-soal.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Modul Materi 01: Eksponensial dan Logaritma (SMA X) -->
+    <url>
+        <loc>https://sumberbelajarmatematika.web.id/materi/eksponensial.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Modul Materi 02: Transformasi Geometri (SMA XI) -->
+    <url>
+        <loc>https://sumberbelajarmatematika.web.id/materi/transformasi-geometri.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Modul Materi 03: Kalkulus Diferensial & Integral (SMA XII) -->
+    <url>
+        <loc>https://sumberbelajarmatematika.web.id/materi/kalkulus-integral.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Modul Pembinaan Olimpiade Sains Nasional (OSN) -->
+    <url>
+        <loc>https://sumberbelajarmatematika.web.id/materi/olimpiade-matematika.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Modul Persiapan UTBK-SNBT -->
+    <url>
+        <loc>https://sumberbelajarmatematika.web.id/materi/utbk-snbt-matematika.html</loc>
+        <lastmod>2026-09-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>

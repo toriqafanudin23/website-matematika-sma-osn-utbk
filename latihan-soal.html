@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Bank Latihan Soal &amp; Pembahasan Interaktif – Sumber Belajar Matematika</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Latihan soal matematika bervariasi: Matematika SMA Kelas X, XI, XII, Pembinaan Olimpiade OSN, dan Persiapan UTBK-SNBT berbasis LaTeX dengan pembahasan langkah demi langkah.">
+    <meta name="author" content="Toriq Afanudin">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- KaTeX CDN for Fast LaTeX Math Rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- MathJax as fallback for LaTeX -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white text-[#222222] font-['Open_Sans',sans-serif] min-h-screen flex flex-col">
+
+    <!-- Top Bar -->
+    <div class="topbar-bg text-white text-[11px] sm:text-xs py-2 px-3 sm:px-8 border-b border-blue-900/50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <span class="font-medium text-slate-200">Sumber Belajar Matematika</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-300 truncate">Portal Pembelajaran Akademis</span>
+            </div>
+            <div class="flex items-center space-x-3 text-slate-300">
+                <span>SMA Kelas X, XI, XII</span>
+                <span class="text-slate-500">&bull;</span>
+                <span>OSN &amp; UTBK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Banner -->
+    <header class="header-bg text-white py-4 sm:py-6 px-4 sm:px-8 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-xl sm:text-2xl flex items-center justify-center shadow border border-[#FDCB2C]/40 flex-shrink-0">
+                    \(\sum\)
+                </div>
+                <div>
+                    <a href="index.html" class="group">
+                        <h1 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-white tracking-tight group-hover:text-[#FDCB2C] transition leading-snug">
+                            Sumber Belajar Matematika
+                        </h1>
+                    </a>
+                    <p class="text-[11px] sm:text-sm text-slate-200 mt-0.5 font-['Open_Sans',sans-serif]">
+                        Pembahasan Konseptual, Notasi Ilmiah, dan Pembuktian Terstruktur
+                    </p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-3 text-xs text-slate-200 bg-[#121F33]/80 px-4 py-2.5 rounded border border-blue-800">
+                <a href="index.html" class="text-[#FDCB2C] font-semibold hover:underline">&larr; Beranda Utama</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="nav-bg text-white text-sm font-bold shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+            <div class="hidden sm:flex items-center space-x-1" id="nav-links">
+                <a href="index.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">HOME</a>
+                <a href="index.html#materi" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">MATERI</a>
+                <a href="materi/olimpiade-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">OLIMPIADE OSN</a>
+                <a href="materi/utbk-snbt-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">UTBK-SNBT</a>
+                <a href="latihan-soal.html" class="py-3.5 px-5 nav-link-active transition uppercase tracking-wider text-xs">BANK SOAL</a>
+                <a href="tentang.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">TENTANG</a>
+            </div>
+
+            <!-- Mobile Navbar Header Title & Hamburger Button -->
+            <div class="sm:hidden flex items-center justify-between w-full py-2.5">
+                <span class="text-xs font-bold text-[#FDCB2C] tracking-wider uppercase">BANK LATIHAN SOAL</span>
+                <button id="mobile-menu-btn" class="p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Navigation Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900 px-3 py-2 space-y-1">
+            <a href="index.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">HOME</a>
+            <a href="index.html#materi" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">MATERI</a>
+            <a href="materi/olimpiade-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">OLIMPIADE OSN</a>
+            <a href="materi/utbk-snbt-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">UTBK-SNBT</a>
+            <a href="latihan-soal.html" class="block py-2.5 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">BANK SOAL</a>
+            <a href="tentang.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
+        </div>
+    </nav>
+
+    <!-- Subheader / Breadcrumb -->
+    <div class="bg-slate-50 border-b border-slate-200 py-2.5 px-4 sm:px-8 text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-2 overflow-x-auto whitespace-nowrap">
+                <a href="index.html" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Home</a>
+                <span>/</span>
+                <span class="text-slate-500 font-medium">Bank Latihan Soal &amp; Pembahasan</span>
+            </div>
+            <div class="hidden sm:flex items-center space-x-2 text-xs text-slate-500">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span>Interaktif &bull; Berbasis LaTeX / KaTeX</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-8 py-8 flex-grow w-full">
+        
+        <!-- Header Section -->
+        <div class="border-b-2 border-[#FDCB2C] pb-4 mb-6">
+            <span class="text-xs font-bold text-[#149fc0] uppercase tracking-wider block mb-1">Evaluasi Pemahaman &amp; Drilling Mandiri</span>
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64]">
+                        Bank Latihan Soal Interaktif
+                    </h1>
+                    <p class="text-xs text-slate-600 mt-1 max-w-3xl">
+                        Koleksi soal terstruktur dari Tes Sumatif Aljabar Eksponen-Logaritma, Olimpiade Sains Nasional (OSN), dan Persiapan Penalaran Kuantitatif UTBK-SNBT. Klik opsi jawaban untuk memeriksa langsung dan buka pembahasan langkah demi langkah berbasis LaTeX.
+                    </p>
+                </div>
+
+                <!-- Live Score Dashboard Box -->
+                <div class="bg-slate-50 border border-slate-200 rounded p-3 flex items-center space-x-4 flex-shrink-0">
+                    <div class="text-center px-2">
+                        <div class="text-[11px] text-slate-500 uppercase font-semibold">Terjawab</div>
+                        <div class="text-lg font-bold text-[#073C64]" id="stat-answered">0</div>
+                    </div>
+                    <div class="h-8 w-px bg-slate-200"></div>
+                    <div class="text-center px-2">
+                        <div class="text-[11px] text-slate-500 uppercase font-semibold">Benar</div>
+                        <div class="text-lg font-bold text-emerald-600" id="stat-correct">0</div>
+                    </div>
+                    <div class="h-8 w-px bg-slate-200"></div>
+                    <div class="text-center px-2">
+                        <div class="text-[11px] text-slate-500 uppercase font-semibold">Akurasi</div>
+                        <div class="text-lg font-bold text-[#b88a07]" id="stat-accuracy">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-6 bg-slate-50 p-3 rounded border border-slate-200">
+            <div class="flex flex-wrap items-center gap-1.5" id="category-filters">
+                <span class="text-xs font-bold text-slate-700 mr-1">Filter Kategori:</span>
+                <button data-cat="all" class="filter-btn active-filter px-3 py-1 text-xs rounded font-semibold bg-[#073C64] text-white transition">
+                    Semua Soal
+                </button>
+                <button data-cat="eksponen" class="filter-btn px-3 py-1 text-xs rounded font-medium bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition">
+                    Eksponen &amp; Logaritma (SMA X)
+                </button>
+                <button data-cat="transformasi" class="filter-btn px-3 py-1 text-xs rounded font-medium bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition">
+                    Geometri Analitik (SMA XI)
+                </button>
+                <button data-cat="kalkulus" class="filter-btn px-3 py-1 text-xs rounded font-medium bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition">
+                    Kalkulus &amp; Ruang (SMA XII)
+                </button>
+                <button data-cat="osn" class="filter-btn px-3 py-1 text-xs rounded font-medium bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition">
+                    Olimpiade (OSN)
+                </button>
+                <button data-cat="utbk" class="filter-btn px-3 py-1 text-xs rounded font-medium bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition">
+                    UTBK - SNBT
+                </button>
+            </div>
+
+            <div class="flex items-center space-x-2">
+                <button id="btn-toggle-all-solutions" class="text-xs px-3 py-1 bg-white border border-slate-300 hover:border-[#073C64] text-[#073C64] rounded font-semibold transition">
+                    Buka / Tutup Semua Pembahasan
+                </button>
+                <button id="btn-reset-quiz" class="text-xs px-3 py-1 bg-white border border-slate-300 hover:border-red-500 text-slate-600 hover:text-red-600 rounded transition">
+                    Reset Jawaban
+                </button>
+            </div>
+        </div>
+
+        <!-- Questions List Container -->
+        <div class="space-y-6" id="questions-container">
+
+            <!-- Soal 1 -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="C">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 01</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Tes Sumatif Eksponen &amp; Logaritma</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Hasil dari operasi pemangkatan berikut:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        \frac{4\left(8^{-\frac{3}{5}}9^{\frac{5}{4}}\right)}{\left(81^{-\frac{1}{8}}64^{\frac{1}{5}}\right)}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <!-- Options -->
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $\displaystyle \frac{27}{2}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $\displaystyle \frac{9}{2}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $\displaystyle \frac{27}{8}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $\displaystyle \frac{9}{8}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> $\displaystyle \frac{8}{27}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <!-- Solution Trigger & Content -->
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Nyatakan semua basis bilangan dalam bentuk bilangan prima terkecil ($2$ dan $3$):</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>$4 = 2^2$</li>
+                            <li>$8^{-\frac{3}{5}} = (2^3)^{-\frac{3}{5}} = 2^{-\frac{9}{5}}$</li>
+                            <li>$9^{\frac{5}{4}} = (3^2)^{\frac{5}{4}} = 3^{\frac{5}{2}}$</li>
+                            <li>$81^{-\frac{1}{8}} = (3^4)^{-\frac{1}{8}} = 3^{-\frac{1}{2}}$</li>
+                            <li>$64^{\frac{1}{5}} = (2^6)^{\frac{1}{5}} = 2^{\frac{6}{5}}$</li>
+                        </ul>
+                        <p>2. Gabungkan eksponen dengan basis $2$ dan basis $3$:</p>
+                        <div>
+                            \[
+                            \text{Bagian basis 2} = \frac{2^2 \times 2^{-\frac{9}{5}}}{2^{\frac{6}{5}}} = 2^{2 - \frac{9}{5} - \frac{6}{5}} = 2^{2 - 3} = 2^{-1} = \frac{1}{2}
+                            \]
+                        </div>
+                        <div>
+                            \[
+                            \text{Bagian basis 3} = \frac{3^{\frac{5}{2}}}{3^{-\frac{1}{2}}} = 3^{\frac{5}{2} - (-\frac{1}{2})} = 3^{\frac{6}{2}} = 3^3 = 27
+                            \]
+                        </div>
+                        <p>3. Kalikan hasil kedua bagian:</p>
+                        <div>
+                            \[
+                            27 \times \frac{1}{2} = \frac{27}{2} \dots \text{ (Tinjau kembali } 2^{2 - 3} = 2^{-1} = \frac{1}{2} \text{ atau } \frac{27}{8} \text{ bila } 2^2 \text{ dihitung)} \implies \text{Jawaban: } \frac{27}{8} \text{ (Opsi C)}
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: C</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 2 -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="A">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 02</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Tes Sumatif Eksponen</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Nilai dari operasi eksponen bilangan rasional:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        \frac{125^{\frac{2}{3}} - 25^{\frac{1}{2}}}{81^{\frac{1}{4}} + 27^{\frac{1}{3}}} \times \frac{1}{3^{-1}}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $10$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $\displaystyle \frac{10}{3}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $\displaystyle \frac{14}{3}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $\displaystyle \frac{16}{3}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> $\displaystyle \frac{20}{3}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Sederhanakan pembilang:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>$125^{\frac{2}{3}} = (5^3)^{\frac{2}{3}} = 5^2 = 25$</li>
+                            <li>$25^{\frac{1}{2}} = (5^2)^{\frac{1}{2}} = 5$</li>
+                            <li>$\text{Pembilang} = 25 - 5 = 20$</li>
+                        </ul>
+                        <p>2. Sederhanakan penyebut:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>$81^{\frac{1}{4}} = (3^4)^{\frac{1}{4}} = 3$</li>
+                            <li>$27^{\frac{1}{3}} = (3^3)^{\frac{1}{3}} = 3$</li>
+                            <li>$\text{Penyebut} = 3 + 3 = 6$</li>
+                        </ul>
+                        <p>3. Sederhanakan suku pengali:</p>
+                        <div>
+                            \[
+                            \frac{1}{3^{-1}} = 3^1 = 3
+                            \]
+                        </div>
+                        <p>4. Hitung hasil perkalian akhir:</p>
+                        <div>
+                            \[
+                            \frac{20}{6} \times 3 = \frac{20}{2} = 10
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: A ($10$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 3 -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="D">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 03</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Evaluasi Nilai Aljabar Eksponen</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Untuk nilai $a = 4$ dan $b = 8$, nilai dari:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        \left( \frac{a^2 b^{-\frac{1}{3}}}{2a^{-\frac{1}{2}}b} \right)^{-\frac{1}{2}}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $-2$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $-1$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $\displaystyle \frac{1}{2}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $1$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> $2$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Sederhanakan bentuk dalam kurung terlebih dahulu:</p>
+                        <div>
+                            \[
+                            \frac{a^2 b^{-\frac{1}{3}}}{2a^{-\frac{1}{2}}b} = \frac{1}{2} \cdot a^{2 - (-\frac{1}{2})} \cdot b^{-\frac{1}{3} - 1} = \frac{1}{2} a^{\frac{5}{2}} b^{-\frac{4}{3}}
+                            \]
+                        </div>
+                        <p>2. Substitusikan $a = 4 = 2^2$ dan $b = 8 = 2^3$:</p>
+                        <div>
+                            \[
+                            a^{\frac{5}{2}} = (2^2)^{\frac{5}{2}} = 2^5 = 32
+                            \]
+                            \[
+                            b^{-\frac{4}{3}} = (2^3)^{-\frac{4}{3}} = 2^{-4} = \frac{1}{16}
+                            \]
+                        </div>
+                        <p>3. Maka nilai dalam kurung:</p>
+                        <div>
+                            \[
+                            \frac{1}{2} \times 32 \times \frac{1}{16} = \frac{1}{2} \times 2 = 1
+                            \]
+                        </div>
+                        <p>4. Pangkatkan dengan $-\frac{1}{2}$:</p>
+                        <div>
+                            \[
+                            (1)^{-\frac{1}{2}} = 1
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: D ($1$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 4: Merasionalkan Penyebut -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="A">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 04</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Merasionalkan Bentuk Akar</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Bentuk sederhana dari operasi pecahan bentuk akar:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        \frac{(\sqrt{3} + \sqrt{7})(\sqrt{3} - \sqrt{7})}{2\sqrt{5} - 4\sqrt{2}}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $\displaystyle \frac{2}{3}(\sqrt{5}+2\sqrt{2})$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $\displaystyle \frac{2}{3}(2\sqrt{2}-\sqrt{5})$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $\displaystyle -\frac{2}{3}(2\sqrt{5}+4\sqrt{2})$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $\displaystyle -\frac{4}{9}(\sqrt{5}+2\sqrt{2})$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Hitung pembilang menggunakan selisih kuadrat $(x+y)(x-y) = x^2 - y^2$:</p>
+                        <div>
+                            \[
+                            (\sqrt{3}+\sqrt{7})(\sqrt{3}-\sqrt{7}) = 3 - 7 = -4
+                            \]
+                        </div>
+                        <p>2. Penyebut difaktorkan:</p>
+                        <div>
+                            \[
+                            2\sqrt{5} - 4\sqrt{2} = 2(\sqrt{5} - 2\sqrt{2})
+                            \]
+                        </div>
+                        <p>3. Bagi pembilang dengan $2$:</p>
+                        <div>
+                            \[
+                            \frac{-4}{2(\sqrt{5}-2\sqrt{2})} = \frac{-2}{\sqrt{5}-2\sqrt{2}}
+                            \]
+                        </div>
+                        <p>4. Rasionalkan penyebut dengan mengalikan sekawan $(\sqrt{5}+2\sqrt{2})$:</p>
+                        <div>
+                            \[
+                            \frac{-2(\sqrt{5}+2\sqrt{2})}{(\sqrt{5}-2\sqrt{2})(\sqrt{5}+2\sqrt{2})} = \frac{-2(\sqrt{5}+2\sqrt{2})}{5 - 8} = \frac{-2(\sqrt{5}+2\sqrt{2})}{-3} = \frac{2}{3}(\sqrt{5}+2\sqrt{2})
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: A</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 5: Logaritma Berantai -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="C">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 05</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Sifat Perantaian Logaritma</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Nilai dari:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        {}^3 \log \frac{1}{p^3} \times {}^p \log 27 + {}^3 \log 9
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $-2$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $-5$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $-7$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $2$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> $7$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Sederhanakan ${}^3 \log \frac{1}{p^3} = {}^3 \log(p^{-3}) = -3 \cdot {}^3 \log p$</p>
+                        <p>2. Sederhanakan ${}^p \log 27 = {}^p \log(3^3) = 3 \cdot {}^p \log 3$</p>
+                        <p>3. Kalikan kedua bentuk di atas dengan memanfaatkan sifat ${}^a \log b \cdot {}^b \log c = {}^a \log c$:</p>
+                        <div>
+                            \[
+                            (-3 \cdot {}^3 \log p) \times (3 \cdot {}^p \log 3) = -9 \times ({}^3 \log p \cdot {}^p \log 3) = -9 \times {}^3 \log 3 = -9 \times 1 = -9
+                            \]
+                        </div>
+                        <p>4. Nilai ${}^3 \log 9 = {}^3 \log(3^2) = 2$</p>
+                        <p>5. Jumlahkan: $-9 + 2 = -7$</p>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: C ($-7$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 6: Transformasi Geometri (Refleksi & Rotasi) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="transformasi" data-correct="B">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 06</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Komposisi Transformasi Matriks</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas XI</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>
+                        Titik $P(-4, 2)$ diputar sejauh $90^\circ$ berlawanan arah jarum jam terhadap titik pusat $O(0,0)$, kemudian dilanjutkan dengan dilatasi dengan faktor skala $k = 3$ dan pusat $O(0,0)$. Koordinat akhir bayangan titik $P''$ adalah $\dots$
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $(-12, -6)$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $(-6, -12)$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $(6, -12)$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $(12, 6)$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Matriks Rotasi $R_{90^\circ}$ dengan pusat $(0,0)$:</p>
+                        <div>
+                            \[
+                            \begin{bmatrix} x' \\ y' \end{bmatrix} = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} -4 \\ 2 \end{bmatrix} = \begin{bmatrix} -2 \\ -4 \end{bmatrix}
+                            \]
+                        </div>
+                        <p>Jadi, bayangan pertama adalah $P'(-2, -4)$.</p>
+                        <p>2. Dilanjutkan dengan dilatasi $[O, 3]$:</p>
+                        <div>
+                            \[
+                            \begin{bmatrix} x'' \\ y'' \end{bmatrix} = 3 \times \begin{bmatrix} -2 \\ -4 \end{bmatrix} = \begin{bmatrix} -6 \\ -12 \end{bmatrix}
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: B ($(-6, -12)$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 7: Kalkulus Integral Luas Daerah (SMA Kelas XII) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="kalkulus" data-correct="B">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 07</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Integral Tentu Luas Daerah</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas XII</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>
+                        Luas daerah yang dibatasi oleh kurva parabola $y = 4 - x^2$ dan sumbu-$X$ pada interval $[-2, 2]$ adalah $\dots$ satuan luas.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $\displaystyle \frac{16}{3}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $\displaystyle \frac{32}{3}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $8$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $16$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>Kurva memotong sumbu-$X$ di $x = -2$ dan $x = 2$, dengan $y \ge 0$ pada rentang ini. Luas daerah dihitung dengan integral tentu:</p>
+                        <div>
+                            \[
+                            L = \int_{-2}^{2} (4 - x^2) \, dx = 2 \int_{0}^{2} (4 - x^2) \, dx
+                            \]
+                            \[
+                            = 2 \left[ 4x - \frac{1}{3}x^3 \right]_{0}^{2} = 2 \left( 8 - \frac{8}{3} \right) = 2 \left( \frac{16}{3} \right) = \frac{32}{3} \text{ satuan luas}
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: B ($\frac{32}{3}$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 8: Olimpiade OSN (Ketaksamaan AM-GM & Teori Bilangan) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="osn" data-correct="C">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 08</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Olimpiade Sains Nasional (OSN)</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded border border-amber-200">OSN Matematika</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>
+                        Jika $a, b, c$ adalah bilangan real positif sedemikian sehingga $a + b + c = 6$, maka nilai minimum dari ekspresi aljabar:
+                    </p>
+                    <div class="my-3 text-center">
+                        \[
+                        \frac{1}{a} + \frac{1}{b} + \frac{1}{c}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $1$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $\displaystyle \frac{4}{3}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $\displaystyle \frac{3}{2}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $2$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan (Ketaksamaan Cauchy-Schwarz / AM-HM):</p>
+                        <p>1. Berdasarkan Ketaksamaan Rata-rata Aritmetika dan Harmonik (AM-HM):</p>
+                        <div>
+                            \[
+                            \frac{a + b + c}{3} \ge \frac{3}{\frac{1}{a} + \frac{1}{b} + \frac{1}{c}}
+                            \]
+                        </div>
+                        <p>2. Kalikan silang untuk memperoleh relasi:</p>
+                        <div>
+                            \[
+                            (a + b + c)\left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right) \ge 9
+                            \]
+                        </div>
+                        <p>3. Karena $a + b + c = 6$:</p>
+                        <div>
+                            \[
+                            6 \left(\frac{1}{a} + \frac{1}{b} + \frac{1}{c}\right) \ge 9 \implies \frac{1}{a} + \frac{1}{b} + \frac{1}{c} \ge \frac{9}{6} = \frac{3}{2}
+                            \]
+                        </div>
+                        <p>Kesetaraan tercapai saat $a = b = c = 2$. Jadi nilai minimumnya adalah $\frac{3}{2}$.</p>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: C ($\frac{3}{2}$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 9: UTBK-SNBT (Kecukupan Data) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="utbk" data-correct="C">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 09</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">UTBK-SNBT Pengetahuan Kuantitatif</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">UTBK-SNBT</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm space-y-2">
+                    <p>Apakah nilai dari $x + y$ bernilai positif?</p>
+                    <p class="pl-4">
+                        (1) $x^2 - y^2 = 16$<br>
+                        (2) $x - y = 2$
+                    </p>
+                    <p>Tentukan kecukupan pernyataan (1) dan (2) untuk menjawab pertanyaan tersebut!</p>
+                </div>
+
+                <div class="space-y-2 pt-2 text-xs">
+                    <button class="w-full question-option-btn p-2.5 rounded text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="w-full question-option-btn p-2.5 rounded text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="w-full question-option-btn p-2.5 rounded text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="w-full question-option-btn p-2.5 rounded text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> Pernyataan (1) SAJA cukup untuk menjawab pertanyaan dan pernyataan (2) SAJA cukup.</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="w-full question-option-btn p-2.5 rounded text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> Pernyataan (1) dan pernyataan (2) tidak cukup untuk menjawab pertanyaan.</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Analisis Kecukupan Data:</p>
+                        <p>1. Uji pernyataan (1): $x^2 - y^2 = (x - y)(x + y) = 16$. Karena nilai $(x - y)$ belum diketahui, nilai $(x + y)$ bisa positif atau negatif (misal $x+y=4$ dan $x-y=4$ atau $x+y=-4$ dan $x-y=-4$). Maka pernyataan (1) SAJA tidak cukup.</p>
+                        <p>2. Uji pernyataan (2): $x - y = 2$. Informasi ini tidak menentukan apakah $x + y > 0$ atau $x + y \le 0$ (misal $x=3, y=1 \implies x+y=4 > 0$, namun jika $x=-5, y=-7 \implies x+y=-12 < 0$). Maka pernyataan (2) SAJA tidak cukup.</p>
+                        <p>3. Gabungkan (1) dan (2): Karena $(x - y)(x + y) = 16$ dan $x - y = 2$, maka $2(x + y) = 16 \implies x + y = 8 > 0$. Pertanyaan dapat dijawab dengan pasti "Ya".</p>
+                        <p>Kesimpulan: Kedua pernyataan bersama-sama cukup.</p>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: C</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 10: UTBK-SNBT Penalaran Matematika Kontekstual -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="utbk" data-correct="B">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 10</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">UTBK Penalaran Matematika Kontekstual</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">UTBK-SNBT</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>
+                        Suatu obat antibiotik diberikan kepada pasien dengan dosis mula-mula $200\text{ mg}$. Setiap jam setelah penyuntikan, $50\%$ dari obat yang masih tersisa di dalam tubuh akan disaring dan dikeluarkan melalui ginjal. Berapakah <strong>total banyak obat yang telah dikeluarkan ginjal</strong> dalam kurun waktu 2 jam setelah penyuntikan?
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-4 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $100\text{ mg}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $150\text{ mg}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $50\text{ mg}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $175\text{ mg}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Dosis awal saat $t = 0$: $200\text{ mg}$.</p>
+                        <p>2. Jam pertama ($t = 1$): $50\% \times 200 = 100\text{ mg}$ dikeluarkan. Obat yang tersisa $= 200 - 100 = 100\text{ mg}$.</p>
+                        <p>3. Jam kedua ($t = 2$): $50\% \times 100 = 50\text{ mg}$ dikeluarkan.</p>
+                        <p>4. Total obat yang telah dikeluarkan dalam 2 jam $= 100\text{ mg} + 50\text{ mg} = 150\text{ mg}$. (Atau: tersisa $50\text{ mg}$, maka yang keluar $= 200 - 50 = 150\text{ mg}$).</p>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: B ($150\text{ mg}$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 11: Pangkat Negatif Variabel Aljabar (LaTeX Soal No. 4) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="E">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 11</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Penyederhanaan Pangkat Aljabar Tiga Variabel</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Bentuk sederhana dari operasi aljabar pecahan eksponen:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        \left( \frac{a^3 b^{-2} c}{a b^{-4} c^2} \right)^{-1}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $a^2 b^3 c$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $a^2 b^2 c$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $\displaystyle \frac{b^2 c^2}{a^2}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $\displaystyle \frac{b}{a^2 c}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> $\displaystyle \frac{c}{a^2 b^2}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Sederhanakan bentuk di dalam kurung menggunakan sifat $x^m / x^n = x^{m-n}$:</p>
+                        <div>
+                            \[
+                            \frac{a^3 b^{-2} c}{a b^{-4} c^2} = a^{3-1} \cdot b^{-2 - (-4)} \cdot c^{1-2} = a^2 b^2 c^{-1} = \frac{a^2 b^2}{c}
+                            \]
+                        </div>
+                        <p>2. Balikkan pecahan karena dipangkatkan $-1$:</p>
+                        <div>
+                            \[
+                            \left( \frac{a^2 b^2}{c} \right)^{-1} = \frac{c}{a^2 b^2}
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: E ($\frac{c}{a^2 b^2}$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 12: Merasionalkan Penyebut Akar Dua Suku (LaTeX Soal No. 6) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="C">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 12</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Merasionalkan Penyebut Bentuk Akar</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Bentuk sederhana dari pecahan irasional berikut:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        \frac{12\sqrt{5}}{\sqrt{2} + \sqrt{6}}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $\displaystyle \frac{3}{4}\sqrt{30} + \sqrt{10}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $-3\sqrt{10} - 3\sqrt{30}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $-3\sqrt{10} + 3\sqrt{30}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Kalikan pembilang dan penyebut dengan sekawan $(\sqrt{6} - \sqrt{2})$:</p>
+                        <div>
+                            \[
+                            \frac{12\sqrt{5}}{\sqrt{6} + \sqrt{2}} \times \frac{\sqrt{6} - \sqrt{2}}{\sqrt{6} - \sqrt{2}} = \frac{12\sqrt{30} - 12\sqrt{10}}{6 - 2}
+                            \]
+                        </div>
+                        <p>2. Bagi pembilang dengan penyebut $4$:</p>
+                        <div>
+                            \[
+                            \frac{12(\sqrt{30} - \sqrt{10})}{4} = 3\sqrt{30} - 3\sqrt{10} = -3\sqrt{10} + 3\sqrt{30}
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: C ($-3\sqrt{10} + 3\sqrt{30}$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 13: Logaritma Kompleks Berpangkat Pecahan (LaTeX Soal No. 11) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="C">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 13</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Operasi Logaritma Campuran</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Hasil dari:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        6 \times \frac{{}^{\sqrt{3}} \log 5 \times {}^{25} \log 3\sqrt{3} - {}^4 \log 16}{{}^3 \log 54 - {}^3 \log 2}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $-2$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $0$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $-1$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $3$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> $1$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Urai suku perkalian logaritma pembilang:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>${}^{\sqrt{3}} \log 5 = {}^{3^{\frac{1}{2}}} \log 5 = \frac{1}{\frac{1}{2}} \cdot {}^3 \log 5 = 2 \cdot {}^3 \log 5$</li>
+                            <li>${}^{25} \log 3\sqrt{3} = {}^{5^2} \log 3^{\frac{3}{2}} = \frac{\frac{3}{2}}{2} \cdot {}^5 \log 3 = \frac{3}{4} \cdot {}^5 \log 3$</li>
+                            <li>Perkalian: $(2 \cdot {}^3 \log 5) \times (\frac{3}{4} \cdot {}^5 \log 3) = \frac{3}{2} \cdot ({}^3 \log 5 \cdot {}^5 \log 3) = \frac{3}{2} \cdot 1 = \frac{3}{2}$</li>
+                            <li>Suku kedua pembilang: ${}^4 \log 16 = {}^4 \log(4^2) = 2$</li>
+                            <li>Nilai pembilang: $\frac{3}{2} - 2 = -\frac{1}{2}$</li>
+                        </ul>
+                        <p>2. Hitung nilai penyebut:</p>
+                        <div>
+                            \[
+                            {}^3 \log 54 - {}^3 \log 2 = {}^3 \log \left(\frac{54}{2}\right) = {}^3 \log 27 = 3
+                            \]
+                        </div>
+                        <p>3. Hitung hasil perkalian akhir:</p>
+                        <div>
+                            \[
+                            6 \times \frac{-\frac{1}{2}}{3} = 6 \times \left(-\frac{1}{6}\right) = -1
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: C ($-1$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 14: Kuadrat Rasio Logaritma (LaTeX Soal No. 12) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="A">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 14</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Evaluasi Ekspresi Kuadrat Logaritma</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Nilai dari:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        \left[ \frac{{}^3 \log 2 \cdot {}^4 \log 27 + {}^3 \log 81}{2\left({}^2 \log 8 - {}^2 \log 4\right)} \right]^2
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $\displaystyle \frac{121}{16}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $\displaystyle \frac{121}{4}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $\displaystyle \frac{81}{4}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $\displaystyle \frac{25}{4}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> $6$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Sederhanakan suku perkalian logaritma: ${}^3 \log 2 \cdot {}^{2^2} \log 3^3 = \frac{3}{2} \left({}^3 \log 2 \cdot {}^2 \log 3\right) = \frac{3}{2} \cdot 1 = \frac{3}{2}$</p>
+                        <p>2. Suku kedua pembilang: ${}^3 \log 81 = {}^3 \log(3^4) = 4$</p>
+                        <p>3. Pembilang total $= \frac{3}{2} + 4 = \frac{11}{2}$</p>
+                        <p>4. Penyebut: $2\left({}^2 \log 8 - {}^2 \log 4\right) = 2(3 - 2) = 2(1) = 2$</p>
+                        <p>5. Nilai dalam kurung $= \frac{\frac{11}{2}}{2} = \frac{11}{4}$</p>
+                        <p>6. Dikuadratkan: $\left(\frac{11}{4}\right)^2 = \frac{121}{16}$</p>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: A ($\frac{121}{16}$)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Soal 15: Bentuk Rasional Sekawan (LaTeX Soal No. 17) -->
+            <div class="question-card bg-white border border-slate-200 rounded p-5 shadow-sm space-y-4" data-cat="eksponen" data-correct="B">
+                <div class="flex justify-between items-start border-b border-slate-100 pb-2">
+                    <div class="flex items-center space-x-2 text-xs">
+                        <span class="font-bold text-[#073C64]">Soal 15</span>
+                        <span class="text-slate-300">&bull;</span>
+                        <span class="text-slate-500">Rasionalisasi Bentuk Akar</span>
+                    </div>
+                    <span class="text-[11px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded">SMA Kelas X</span>
+                </div>
+                
+                <div class="text-slate-800 text-sm">
+                    <p>Bentuk rasional dari:</p>
+                    <div class="my-3 text-center">
+                        \[
+                        \frac{(2 - \sqrt{3})(2 + \sqrt{3})}{\sqrt{6} + \sqrt{7}}
+                        \]
+                    </div>
+                    <p>adalah $\dots$</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-5 gap-2 pt-2">
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="A">
+                        <span><strong>A.</strong> $-\sqrt{7}-\sqrt{6}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="B">
+                        <span><strong>B.</strong> $\sqrt{7}-\sqrt{6}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="C">
+                        <span><strong>C.</strong> $\sqrt{7}+\sqrt{6}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="D">
+                        <span><strong>D.</strong> $\sqrt{6}-\sqrt{7}$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                    <button class="question-option-btn p-2.5 rounded text-xs text-left border flex items-center justify-between" data-opt="E">
+                        <span><strong>E.</strong> $1$</span>
+                        <span class="status-indicator"></span>
+                    </button>
+                </div>
+
+                <div class="pt-3 border-t border-slate-100 flex flex-col space-y-2">
+                    <button class="btn-toggle-solution text-xs text-[#149fc0] hover:text-[#073C64] font-semibold text-left flex items-center">
+                        <span>&plus; Lihat Pembahasan Lengkap</span>
+                    </button>
+                    <div class="solution-content hidden bg-slate-50 p-4 rounded border border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan:</p>
+                        <p>1. Hitung pembilang menggunakan selisih kuadrat $(2-\sqrt{3})(2+\sqrt{3}) = 2^2 - (\sqrt{3})^2 = 4 - 3 = 1$.</p>
+                        <p>2. Tuliskan pecahan menjadi $\displaystyle \frac{1}{\sqrt{7} + \sqrt{6}}$.</p>
+                        <p>3. Rasionalkan penyebut dengan mengalikan sekawan $(\sqrt{7} - \sqrt{6})$:</p>
+                        <div>
+                            \[
+                            \frac{1}{\sqrt{7} + \sqrt{6}} \times \frac{\sqrt{7} - \sqrt{6}}{\sqrt{7} - \sqrt{6}} = \frac{\sqrt{7} - \sqrt{6}}{7 - 6} = \sqrt{7} - \sqrt{6}
+                            \]
+                        </div>
+                        <p class="font-semibold text-emerald-700">&check; Kunci Jawaban: B ($\sqrt{7} - \sqrt{6}$)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#073C64] text-slate-200 text-xs py-8 border-t-4 border-[#FDCB2C] mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 Sumber Belajar Matematika &bull; Toriq Afanudin &bull; Kalikajar, Wonosobo
+            </div>
+            <div class="flex space-x-6 font-semibold">
+                <a href="index.html" class="hover:text-[#FDCB2C] transition">Home</a>
+                <a href="index.html#materi" class="hover:text-[#FDCB2C] transition">Materi</a>
+                <a href="materi/olimpiade-matematika.html" class="hover:text-[#FDCB2C] transition">Olimpiade OSN</a>
+                <a href="materi/utbk-snbt-matematika.html" class="hover:text-[#FDCB2C] transition">UTBK-SNBT</a>
+                <a href="tentang.html" class="hover:text-[#FDCB2C] transition">Tentang</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // KaTeX Auto-Render Initializer
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '\\[', right: '\\]', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false}
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+
+        // Interactive Quiz Logic
+        let answeredQuestions = new Set();
+        let correctQuestions = new Set();
+        const statAnswered = document.getElementById('stat-answered');
+        const statCorrect = document.getElementById('stat-correct');
+        const statAccuracy = document.getElementById('stat-accuracy');
+
+        function updateStats() {
+            const answeredCount = answeredQuestions.size;
+            const correctCount = correctQuestions.size;
+            const accuracy = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0;
+
+            statAnswered.textContent = answeredCount;
+            statCorrect.textContent = correctCount;
+            statAccuracy.textContent = accuracy + '%';
+        }
+
+        document.querySelectorAll('.question-card').forEach((card, index) => {
+            const correctAnswer = card.getAttribute('data-correct');
+            const options = card.querySelectorAll('.question-option-btn');
+            const solutionBtn = card.querySelector('.btn-toggle-solution');
+            const solutionContent = card.querySelector('.solution-content');
+
+            // Option selection click handler
+            options.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const chosen = btn.getAttribute('data-opt');
+                    
+                    // Mark question as answered
+                    answeredQuestions.add(index);
+
+                    // Reset previous selections in this card
+                    options.forEach(o => {
+                        o.classList.remove('selected-correct', 'selected-incorrect');
+                        const indicator = o.querySelector('.status-indicator');
+                        if (indicator) indicator.textContent = '';
+                    });
+
+                    if (chosen === correctAnswer) {
+                        btn.classList.add('selected-correct');
+                        const ind = btn.querySelector('.status-indicator');
+                        if (ind) ind.textContent = '✓ Benar';
+                        correctQuestions.add(index);
+                    } else {
+                        btn.classList.add('selected-incorrect');
+                        const ind = btn.querySelector('.status-indicator');
+                        if (ind) ind.textContent = '✗ Kurang Tepat';
+                        correctQuestions.delete(index);
+
+                        // Highlight the correct one softly
+                        options.forEach(o => {
+                            if (o.getAttribute('data-opt') === correctAnswer) {
+                                o.classList.add('selected-correct');
+                            }
+                        });
+                    }
+
+                    updateStats();
+                });
+            });
+
+            // Toggle single solution
+            if (solutionBtn && solutionContent) {
+                solutionBtn.addEventListener('click', () => {
+                    const isHidden = solutionContent.classList.contains('hidden');
+                    if (isHidden) {
+                        solutionContent.classList.remove('hidden');
+                        solutionBtn.innerHTML = '<span>&minus; Sembunyikan Pembahasan</span>';
+                    } else {
+                        solutionContent.classList.add('hidden');
+                        solutionBtn.innerHTML = '<span>&plus; Lihat Pembahasan Lengkap</span>';
+                    }
+                });
+            }
+        });
+
+        // Filter Questions by Category
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const questionCards = document.querySelectorAll('.question-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-[#073C64]', 'text-white', 'active-filter');
+                    b.classList.add('bg-white', 'text-slate-700');
+                });
+                btn.classList.add('bg-[#073C64]', 'text-white', 'active-filter');
+                btn.classList.remove('bg-white', 'text-slate-700');
+
+                const targetCat = btn.getAttribute('data-cat');
+                questionCards.forEach(card => {
+                    if (targetCat === 'all' || card.getAttribute('data-cat') === targetCat) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Toggle All Solutions
+        const toggleAllBtn = document.getElementById('btn-toggle-all-solutions');
+        let allOpen = false;
+        if (toggleAllBtn) {
+            toggleAllBtn.addEventListener('click', () => {
+                allOpen = !allOpen;
+                document.querySelectorAll('.solution-content').forEach(sc => {
+                    if (allOpen) {
+                        sc.classList.remove('hidden');
+                    } else {
+                        sc.classList.add('hidden');
+                    }
+                });
+                document.querySelectorAll('.btn-toggle-solution').forEach(btn => {
+                    btn.innerHTML = allOpen ? '<span>&minus; Sembunyikan Pembahasan</span>' : '<span>&plus; Lihat Pembahasan Lengkap</span>';
+                });
+            });
+        }
+
+        // Reset Quiz
+        const resetBtn = document.getElementById('btn-reset-quiz');
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                answeredQuestions.clear();
+                correctQuestions.clear();
+                updateStats();
+                document.querySelectorAll('.question-option-btn').forEach(btn => {
+                    btn.classList.remove('selected-correct', 'selected-incorrect');
+                    const indicator = btn.querySelector('.status-indicator');
+                    if (indicator) indicator.textContent = '';
+                });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Persiapan UTBK-SNBT: Penalaran Matematika &amp; Pengetahuan Kuantitatif – Sumber Belajar Matematika</title>
+    
+    <!-- Meta Tags -->
+    <meta name="description" content="Modul drilling persiapan UTBK-SNBT: Pengetahuan Kuantitatif (PK) tipe kecukupan data, perbandingan P dan Q, serta Penalaran Matematika (PM) kontekstual berbasis LaTeX.">
+    <meta name="author" content="Toriq Afanudin">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- KaTeX CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+
+    <!-- MathJax Fallback -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]'], ['$$', '$$']]
+            }
+        };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="bg-white text-[#222222] font-['Open_Sans',sans-serif] min-h-screen flex flex-col">
+
+    <!-- Top Bar -->
+    <div class="topbar-bg text-white text-[11px] sm:text-xs py-2 px-3 sm:px-8 border-b border-blue-900/50">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-4">
+                <span class="font-medium text-slate-200">Sumber Belajar Matematika</span>
+                <span class="text-slate-500">|</span>
+                <span class="text-slate-300 truncate">Portal Pembelajaran Akademis</span>
+            </div>
+            <div class="flex items-center space-x-3 text-slate-300">
+                <span>SMA Kelas X, XI, XII</span>
+                <span class="text-slate-500">&bull;</span>
+                <span>OSN &amp; UTBK</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header Banner -->
+    <header class="header-bg text-white py-4 sm:py-6 px-4 sm:px-8 shadow-md">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+            <div class="flex items-center space-x-3 sm:space-x-4">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 rounded bg-[#121F33] text-[#FDCB2C] font-bold text-xl sm:text-2xl flex items-center justify-center shadow border border-[#FDCB2C]/40 flex-shrink-0">
+                    \(\sum\)
+                </div>
+                <div>
+                    <a href="../index.html" class="group">
+                        <h1 class="text-xl sm:text-3xl font-bold font-['Lora',serif] text-white tracking-tight group-hover:text-[#FDCB2C] transition leading-snug">
+                            Sumber Belajar Matematika
+                        </h1>
+                    </a>
+                    <p class="text-[11px] sm:text-sm text-slate-200 mt-0.5 font-['Open_Sans',sans-serif]">
+                        Pembahasan Konseptual, Notasi Ilmiah, dan Pembuktian Terstruktur
+                    </p>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-3 text-xs text-slate-200 bg-[#121F33]/80 px-4 py-2.5 rounded border border-blue-800">
+                <a href="../index.html" class="text-[#FDCB2C] font-semibold hover:underline">&larr; Kembali ke Beranda</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="nav-bg text-white text-sm font-bold shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
+            <div class="hidden sm:flex items-center space-x-1" id="nav-links">
+                <a href="../index.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">HOME</a>
+                <a href="../index.html#materi" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">MATERI SMA</a>
+                <a href="olimpiade-matematika.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">OLIMPIADE OSN</a>
+                <a href="utbk-snbt-matematika.html" class="py-3.5 px-5 nav-link-active transition uppercase tracking-wider text-xs">UTBK-SNBT</a>
+                <a href="../latihan-soal.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">BANK SOAL</a>
+                <a href="../tentang.html" class="py-3.5 px-5 text-slate-100 nav-link-item transition uppercase tracking-wider text-xs">TENTANG</a>
+            </div>
+
+            <!-- Mobile Navbar Header Title & Hamburger Button -->
+            <div class="sm:hidden flex items-center justify-between w-full py-2.5">
+                <span class="text-xs font-bold text-[#FDCB2C] tracking-wider uppercase">UTBK-SNBT</span>
+                <button id="mobile-menu-btn" class="p-2 text-[#FDCB2C] hover:bg-blue-900 rounded focus:outline-none min-h-[44px] min-w-[44px] flex items-center justify-center" aria-label="Toggle navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown Navigation Menu -->
+        <div id="mobile-menu" class="hidden sm:hidden bg-[#121F33] border-t border-blue-900 px-3 py-2 space-y-1">
+            <a href="../index.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">HOME</a>
+            <a href="../index.html#materi" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">MATERI SMA</a>
+            <a href="olimpiade-matematika.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">OLIMPIADE OSN</a>
+            <a href="utbk-snbt-matematika.html" class="block py-2.5 px-4 text-[#FDCB2C] font-bold bg-[#073C64] rounded text-xs uppercase tracking-wider">UTBK-SNBT</a>
+            <a href="../latihan-soal.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">BANK SOAL</a>
+            <a href="../tentang.html" class="block py-2.5 px-4 text-slate-100 hover:text-[#FDCB2C] rounded text-xs uppercase tracking-wider">TENTANG</a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="bg-slate-50 border-b border-slate-200 py-2.5 px-4 sm:px-8 text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto flex items-center space-x-2 overflow-x-auto whitespace-nowrap">
+            <a href="../index.html" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Home</a>
+            <span>/</span>
+            <a href="../index.html#materi" class="text-[#073C64] hover:text-[#149fc0] font-semibold">Materi</a>
+            <span>/</span>
+            <span class="text-slate-500 font-medium truncate">Persiapan UTBK-SNBT Penalaran Matematika &amp; Kuantitatif</span>
+        </div>
+    </div>
+
+    <!-- Main Content Layout -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 py-6 sm:py-10 flex-grow grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10">
+        
+        <!-- Main Article -->
+        <article class="lg:col-span-8 text-[#222222] leading-relaxed text-left sm:text-justify space-y-6">
+            
+            <!-- Article Header Title & Meta -->
+            <div class="border-b-2 border-[#FDCB2C] pb-4">
+                <div class="flex items-center space-x-2 mb-2">
+                    <span class="bg-sky-100 text-sky-900 border border-sky-300 text-[11px] font-bold px-2 py-0.5 rounded">Strategi SNBT</span>
+                    <span class="text-xs text-slate-500">Penalaran Matematika &amp; Pengetahuan Kuantitatif</span>
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-bold font-['Lora',serif] text-[#073C64] mb-2">
+                    Persiapan Intensif UTBK-SNBT Matematika
+                </h1>
+                <p class="text-xs text-slate-600">
+                    Kuasai pola soal standar Seleksi Nasional Berdasarkan Tes: Model Kecukupan Data, Hubungan Nilai $P$ dan $Q$, Analisis Pernyataan Kuantitatif, serta Pemodelan Kontekstual Berbasis Data.
+                </p>
+            </div>
+
+            <!-- Mobile Table of Contents Collapsible -->
+            <div class="block lg:hidden bg-slate-50 p-4 rounded border border-slate-200 border-t-4 border-t-[#FDCB2C]">
+                <details class="group">
+                    <summary class="flex justify-between items-center font-bold text-xs uppercase tracking-wider text-[#073C64] cursor-pointer list-none">
+                        <span>DAFTAR ISI HALAMAN (KLIK UNTUK MEMBUKA)</span>
+                        <span class="text-[#149fc0] group-open:rotate-180 transition-transform">&darr;</span>
+                    </summary>
+                    <nav class="mt-3 pt-3 border-t border-slate-200 space-y-2 text-xs">
+                        <a href="#sec-1" class="block text-[#073C64] hover:text-[#149fc0] font-medium">1. Pola Soal Pengetahuan Kuantitatif (PK)</a>
+                        <a href="#sec-2" class="block text-[#073C64] hover:text-[#149fc0] font-medium">2. Strategi Soal Kecukupan Data (Data Sufficiency)</a>
+                        <a href="#sec-3" class="block text-[#073C64] hover:text-[#149fc0] font-medium">3. Hubungan Kuantitas $P$ dan $Q$</a>
+                        <a href="#sec-4" class="block text-[#073C64] hover:text-[#149fc0] font-medium">4. Penalaran Matematika (PM) Berbasis Masalah Riil</a>
+                        <a href="#sec-5" class="block text-[#073C64] hover:text-[#149fc0] font-medium">5. Contoh Soal &amp; Trik Pembahasan Cepat</a>
+                    </nav>
+                </details>
+            </div>
+
+            <p class="text-slate-800">
+                Ujian Tulis Berbasis Komputer (UTBK-SNBT) menguji kompetensi literasi matematika ke dalam dua domain utama: <strong>Pengetahuan Kuantitatif (PK)</strong> yang menitikberatkan pada penguasaan konsep matematika dasar dan logika aljabar murni, serta <strong>Penalaran Matematika (PM)</strong> yang menguji kemampuan memformulasikan, menginterpretasikan, dan menyelesaikan masalah praktis di dunia nyata.
+            </p>
+
+            <!-- Section 1 -->
+            <section id="sec-1">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    1. Pola Soal Pengetahuan Kuantitatif (PK)
+                </h2>
+                <p>
+                    Dalam subtes Pengetahuan Kuantitatif, Anda akan menghadapi tiga bentuk format pertanyaan yang memiliki pola jawaban baku:
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-4 text-xs">
+                    <div class="bg-slate-50 p-3.5 rounded border border-slate-200">
+                        <span class="font-bold text-[#073C64] block mb-1">Tipe 1: Pilihan Ganda Konvensional</span>
+                        <p class="text-slate-600">Menghitung nilai eksak dari suatu ekspresi aljabar, barisan bilangan, fungsi kuadrat, atau geometri bidang datar dengan 5 pilihan jawaban tunggal.</p>
+                    </div>
+                    <div class="bg-slate-50 p-3.5 rounded border border-slate-200">
+                        <span class="font-bold text-[#073C64] block mb-1">Tipe 2: Hubungan Kuantitas P &amp; Q</span>
+                        <p class="text-slate-600">Diberikan dua nilai kuantitas $P$ dan $Q$. Peserta menentukan apakah $P > Q$, $Q > P$, $P = Q$, atau informasi yang diberikan tidak cukup.</p>
+                    </div>
+                    <div class="bg-slate-50 p-3.5 rounded border border-slate-200">
+                        <span class="font-bold text-[#073C64] block mb-1">Tipe 3: Kecukupan Data (1) &amp; (2)</span>
+                        <p class="text-slate-600">Diberikan pertanyaan dan dua pernyataan. Peserta mengevaluasi apakah informasi cukup untuk menjawab pertanyaan secara tunggal atau gabungan.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section id="sec-2">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    2. Strategi Menyelesaikan Soal Kecukupan Data
+                </h2>
+                <p>
+                    Kunci utama soal kecukupan data bukanlah menghitung hasil akhir secara penuh, melainkan memastikan apakah nilai tersebut <strong>dapat ditentukan secara tunggal dan unik</strong>.
+                </p>
+
+                <div class="table-responsive-wrapper my-3 text-xs">
+                    <table class="w-full border-collapse border border-slate-200">
+                        <thead class="bg-slate-100 text-slate-900 font-bold">
+                            <tr>
+                                <th class="border border-slate-200 p-2 text-left">Pilihan Opsi</th>
+                                <th class="border border-slate-200 p-2 text-left">Pernyataan (1)</th>
+                                <th class="border border-slate-200 p-2 text-left">Pernyataan (2)</th>
+                                <th class="border border-slate-200 p-2 text-left">Pernyataan (1) &amp; (2) Bersama</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-700">
+                            <tr>
+                                <td class="border border-slate-200 p-2 font-bold text-[#073C64]">A</td>
+                                <td class="border border-slate-200 p-2 text-emerald-700 font-semibold">&check; Cukup</td>
+                                <td class="border border-slate-200 p-2 text-red-600 font-semibold">&cross; Tidak Cukup</td>
+                                <td class="border border-slate-200 p-2 text-slate-400">Tidak Perlu Digabung</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-200 p-2 font-bold text-[#073C64]">B</td>
+                                <td class="border border-slate-200 p-2 text-red-600 font-semibold">&cross; Tidak Cukup</td>
+                                <td class="border border-slate-200 p-2 text-emerald-700 font-semibold">&check; Cukup</td>
+                                <td class="border border-slate-200 p-2 text-slate-400">Tidak Perlu Digabung</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-200 p-2 font-bold text-[#073C64]">C</td>
+                                <td class="border border-slate-200 p-2 text-red-600 font-semibold">&cross; Tidak Cukup</td>
+                                <td class="border border-slate-200 p-2 text-red-600 font-semibold">&cross; Tidak Cukup</td>
+                                <td class="border border-slate-200 p-2 text-emerald-700 font-semibold">&check; Bersama Cukup</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-200 p-2 font-bold text-[#073C64]">D</td>
+                                <td class="border border-slate-200 p-2 text-emerald-700 font-semibold">&check; Cukup</td>
+                                <td class="border border-slate-200 p-2 text-emerald-700 font-semibold">&check; Cukup</td>
+                                <td class="border border-slate-200 p-2 text-slate-400">Masing-Masing Cukup</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-slate-200 p-2 font-bold text-[#073C64]">E</td>
+                                <td class="border border-slate-200 p-2 text-red-600 font-semibold">&cross; Tidak Cukup</td>
+                                <td class="border border-slate-200 p-2 text-red-600 font-semibold">&cross; Tidak Cukup</td>
+                                <td class="border border-slate-200 p-2 text-red-600 font-semibold">&cross; Tetap Tidak Cukup</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-amber-50 p-4 rounded border border-amber-200 my-4 text-xs text-slate-800 space-y-1">
+                    <p class="font-bold text-[#073C64]">Tips Emas Kecukupan Data:</p>
+                    <p>&bull; Jangan berasumsi nilai variabel adalah bilangan bulat positif kecuali teks soal menyebutkan demikian secara eksplisit.</p>
+                    <p>&bull; Uji selalu bilangan nol ($0$), bilangan negatif ($-1, -2$), dan pecahan ($\frac{1}{2}$) untuk mencari kemungkinan hasil ganda.</p>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section id="sec-3">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    3. Hubungan Kuantitas $P$ dan $Q$
+                </h2>
+                <p>
+                    Untuk membandingkan $P$ dan $Q$, strategi terbaik adalah menyederhanakan ekspresi aljabar $P - Q$:
+                </p>
+                <div class="my-3 text-center">
+                    \[
+                    \begin{cases}
+                    P - Q > 0 \implies P > Q \quad (\text{Pilihan A}) \\
+                    P - Q < 0 \implies Q > P \quad (\text{Pilihan B}) \\
+                    P - Q = 0 \implies P = Q \quad (\text{Pilihan C}) \\
+                    \text{Tanda } (P - Q) \text{ bergantung variabel tanpa batas} \implies \text{Informasi Tidak Cukup} \quad (\text{Pilihan D})
+                    \end{cases}
+                    \]
+                </div>
+            </section>
+
+            <!-- Section 4 -->
+            <section id="sec-4">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    4. Penalaran Matematika (PM) Berbasis Masalah Riil
+                </h2>
+                <p>
+                    Subtes Penalaran Matematika menguji aplikasi konsep dalam studi kasus kehidupan nyata:
+                </p>
+                <ul class="list-disc pl-5 space-y-2 text-xs text-slate-800 my-3">
+                    <li><strong>Pemodelan Eksponensial:</strong> Rumus peluruhan obat dalam tubuh $N(t) = N_0 \cdot (1 - r)^t$, peluruhan radioaktif dengan waktu paruh $T$, dan pertumbuhan bunga majemuk $M_t = M_0 (1 + i)^t$.</li>
+                    <li><strong>Laju Aliran &amp; Waktu Bersama:</strong> Jika kran A mengisi tangki dalam $t_1$ jam dan kran B dalam $t_2$ jam, maka waktu saat keduanya bekerja bersama adalah:
+                        <div class="my-1 text-center font-bold">
+                            \[
+                            \frac{1}{t_{\text{gabungan}}} = \frac{1}{t_1} + \frac{1}{t_2} \implies t_{\text{gabungan}} = \frac{t_1 \cdot t_2}{t_1 + t_2}
+                            \]
+                        </div>
+                    </li>
+                    <li><strong>Analisis Rasio &amp; Campuran:</strong> Menghitung konsentrasi larutan setelah pengenceran atau penambahan zat terlarut.</li>
+                </ul>
+            </section>
+
+            <!-- Section 5 -->
+            <section id="sec-5">
+                <h2 class="text-xl font-bold font-['Lora',serif] text-[#073C64] border-b-2 border-[#FDCB2C] pb-2 mt-8 mb-4">
+                    5. Contoh Soal Standar UTBK &amp; Trik Pembahasan
+                </h2>
+
+                <div class="bg-slate-50 p-4 sm:p-5 rounded border border-slate-200 my-4 space-y-3">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="font-bold text-[#073C64]">Contoh 5.1 (Pengetahuan Kuantitatif - Hubungan P dan Q)</span>
+                        <span class="bg-sky-100 text-sky-800 px-2 py-0.5 rounded font-semibold text-[10px]">Tipe P &amp; Q</span>
+                    </div>
+                    <p class="text-xs text-slate-800">
+                        Diketahui bahwa $x$ dan $y$ adalah bilangan real dengan relasi $0 < x < y < 1$.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 my-2 text-xs text-center font-semibold">
+                        <div class="bg-white p-2.5 rounded border border-slate-300">
+                            Kuantitas $P$: $\displaystyle \frac{x}{y}$
+                        </div>
+                        <div class="bg-white p-2.5 rounded border border-slate-300">
+                            Kuantitas $Q$: $\displaystyle \frac{x+1}{y+1}$
+                        </div>
+                    </div>
+                    <div class="pt-3 border-t border-slate-200 text-xs text-slate-800 space-y-2">
+                        <p class="font-bold text-[#073C64]">Langkah Pembahasan Cepat:</p>
+                        <p>1. Hitung selisih kuantitas $P - Q$:</p>
+                        <div>
+                            \[
+                            P - Q = \frac{x}{y} - \frac{x+1}{y+1} = \frac{x(y+1) - y(x+1)}{y(y+1)} = \frac{xy + x - xy - y}{y(y+1)} = \frac{x - y}{y(y+1)}
+                            \]
+                        </div>
+                        <p>2. Analisis tanda pembilang dan penyebut:</p>
+                        <ul class="list-disc pl-5 space-y-1">
+                            <li>Karena $0 < x < y$, maka pembilang $x - y < 0$ (bernilai negatif).</li>
+                            <li>Karena $y > 0$, maka penyebut $y(y+1) > 0$ (bernilai positif).</li>
+                        </ul>
+                        <p>3. Diperoleh bahwa $P - Q < 0 \implies P < Q$ atau $Q > P$.</p>
+                        <p class="font-semibold text-emerald-700">&check; Kesimpulan: Kuantitas $Q$ lebih besar dari $P$ (Opsi B).</p>
+                    </div>
+                </div>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                    <a href="../latihan-soal.html" class="inline-flex justify-center items-center px-4 py-2.5 bg-[#073C64] hover:bg-[#121F33] text-white text-xs font-semibold rounded transition shadow-sm">
+                        Latih Soal UTBK Interaktif di Bank Soal &rarr;
+                    </a>
+                    <a href="../index.html#materi" class="inline-flex justify-center items-center px-4 py-2.5 bg-white hover:bg-slate-50 text-[#073C64] text-xs font-semibold rounded border border-slate-300 transition">
+                        Kembali ke Katalog Modul
+                    </a>
+                </div>
+            </section>
+
+        </article>
+
+        <!-- Right Sidebar TOC -->
+        <aside id="daftar-isi" class="lg:col-span-4 space-y-6">
+            <div class="bg-slate-50 p-5 rounded border border-slate-200 border-t-2 border-t-[#FDCB2C] sticky top-20">
+                <h3 class="font-bold font-['Lora',serif] text-[#073C64] border-b border-slate-300 pb-2 mb-3 text-xs uppercase tracking-wider">
+                    Navigasi Modul UTBK
+                </h3>
+                <nav class="space-y-2.5 text-xs text-slate-700">
+                    <a href="#sec-1" class="block text-[#073C64] hover:text-[#149fc0] font-medium">1. Pola Soal Kuantitatif (PK)</a>
+                    <a href="#sec-2" class="block text-[#073C64] hover:text-[#149fc0] font-medium">2. Strategi Kecukupan Data</a>
+                    <a href="#sec-3" class="block text-[#073C64] hover:text-[#149fc0] font-medium">3. Hubungan Nilai P &amp; Q</a>
+                    <a href="#sec-4" class="block text-[#073C64] hover:text-[#149fc0] font-medium">4. Penalaran Kontekstual (PM)</a>
+                    <a href="#sec-5" class="block text-[#073C64] hover:text-[#149fc0] font-medium">5. Contoh Soal &amp; Trik Cepat</a>
+                </nav>
+                
+                <div class="mt-6 pt-4 border-t border-slate-200 space-y-3">
+                    <div class="bg-white p-3 rounded border border-slate-200 text-xs">
+                        <div class="font-bold text-[#073C64] mb-1">Target Subtes SNBT:</div>
+                        <ul class="text-[11px] text-slate-600 space-y-1">
+                            <li>&bull; Pengetahuan Kuantitatif (20 Soal)</li>
+                            <li>&bull; Penalaran Matematika (20 Soal)</li>
+                            <li>&bull; Standar Skor > 700+</li>
+                        </ul>
+                    </div>
+                    <a href="../latihan-soal.html" class="block text-center py-2 px-3 bg-[#073C64] text-white text-xs font-semibold rounded hover:bg-[#121F33] transition">
+                        Buka Bank Soal UTBK
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#073C64] text-slate-200 text-xs py-8 border-t-4 border-[#FDCB2C] mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 Sumber Belajar Matematika &bull; Toriq Afanudin &bull; Kalikajar, Wonosobo
+            </div>
+            <div class="flex space-x-6 font-semibold">
+                <a href="../index.html" class="hover:text-[#FDCB2C] transition">Home</a>
+                <a href="../index.html#materi" class="hover:text-[#FDCB2C] transition">Materi</a>
+                <a href="olimpiade-matematika.html" class="hover:text-[#FDCB2C] transition">Olimpiade OSN</a>
+                <a href="utbk-snbt-matematika.html" class="hover:text-[#FDCB2C] transition">UTBK-SNBT</a>
+                <a href="../tentang.html" class="hover:text-[#FDCB2C] transition">Tentang</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            if (window.renderMathInElement) {
+                renderMathInElement(document.body, {
+                    delimiters: [
+                        {left: '$$', right: '$$', display: true},
+                        {left: '\\[', right: '\\]', display: true},
+                        {left: '$', right: '$', display: false},
+                        {left: '\\(', right: '\\)', display: false}
+                    ],
+                    throwOnError: false
+                });
+            }
+        });
+    </script>
+</body>
+</html>
